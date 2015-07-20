@@ -53,7 +53,7 @@ module.exports = function (grunt) {
             ]
           },
           {
-            dest: 'build/writes/github-markdown.css',
+            dest: 'build/github-markdown.css',
             src: 'node_modules/github-markdown-css/github-markdown.css'
           }
         ]
