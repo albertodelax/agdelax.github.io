@@ -9,17 +9,13 @@
     /*@import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);*/
     html {
       font-family: 'Helvetica Neue', Helvetica, sans-serif;
-      background-color: #1b1b1b;
     }
     body {
       margin: 0 auto;
       max-width: 700px;
       padding: 1% 8% 3% 8%;
-      color: #dfdfdf;
     }
     a{
-      color: red;
-      transition: color 7s;
       text-decoration: none;
     }
     .title-block {
@@ -86,18 +82,6 @@ https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-pdf.pn
 
       ga('create', 'UA-65309658-1', 'auto');
       ga('send', 'pageview');
-
-      var colors = ["red", "orange", "yellow", "GreenYellow", "Aqua", "violet"];
-
-      var i = 2;
-
-      window.setInterval(function(){
-        $('a').css('color', colors[i]);
-        i++;
-        if (i === colors.length){
-          i=0;
-        }
-      }, 3000);
 
     </script>
   </body>
