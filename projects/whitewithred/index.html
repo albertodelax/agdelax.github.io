@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>&#10014;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="theme-color" content="#7D26CD"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+
+    html {
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 700px;
+      padding: 5% 2% 3% 2%;
+      line-height: 1.5;
+    }
+
+    p{
+      margin-top: -15px;
+    }
+
+    a{
+      text-decoration: none;
+      color: black;
+      border-bottom: 2px solid black;
+      padding-bottom: 0px;
+    }
+
+    a:hover{
+      padding-bottom: 5px;
+      transition: padding-bottom 0.3s;
+    }
+
+    ul {
+      margin-top: -13px;
+    }
+
+    .title-block {
+      display: inline-block;
+    }
+
+    #topnav{
+      padding: -5px;
+      padding-bottom: 43px;
+    }
+
+    .nav {
+      display: inline-block;
+      margin: 0 -2px 0 -2px;
+      padding: 0 10px 0 0;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 10px 0 10px 0;
+      display: inline-block;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .column {
+      display: inline-block;
+      max-width: 350px;
+      vertical-align: top;
+    }
+
+    #footer{
+      text-align: center;
+      font-weight: bold;
+    }
+
+    ::-moz-selection { 
+    color: white;
+    background: black;
+    }
+
+    ::selection {
+    color: white;
+    background: black;
+    }
+
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>White with Red</title>
+
+	<style type="text/css">
+	@font-face{
+    	font-family: 'Franklin Gothic';
+        src: url('franklingothic-book.otf') format('opentype');
+    }
+	body{
+		background-color: black;
+		text-align: center;
+	}
+	p {
+		color: #ccc;
+		font-family: 'Franklin Gothic', sans-serif;
+		max-width: 500px;
+		margin: auto;
+		line-height: 20px;
+		font-size: 13px;
+		transition: all 1s;
+	}
+	a{
+		color: #ccc;
+		text-decoration: none;
+	}
+	svg{
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	#titlediv{
+		text-align: left;
+		top: 70px;
+		margin: auto;
+		padding: 30px 0 0 0;
+	}
+
+	#storydiv {
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div id="titlediv">
+		<p>White with Red</p>
+		<p>Author Unknown</p>
+		<p>Illustrations by <a href="http://albertogui.com">Alberto Guillermo de la Cruz</a></p>
+	</div>	
+	<svg onclick="blink()" height="400" width="550">
+		<defs>
+			<clipPath id="svgPath">
+			<!-- d="M toparc(xpos ypos q stroke-anchor stroke-height stroke-end-point) M bottomarc(xpos ypos q stroke-anchor stroke-height stroke-end-point)" -->
+				<path id="eye" d="M 0 150 q 215 -200 450 0 M 0 150 q 215 200 450 0"/>
+			</clipPath>
+		</defs>
+		<g transform="translate(50,50)">        
+                <image 
+                        xlink:href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/1.jpg" id="eyeimage" clip-path="url(#svgPath)" height="500" width="500">
+                </image>                
+          </g>
+	</svg>
+	<div id="storydiv">
+		<p id="storytext"onclick="blink()">A man went to a hotel and walked up to the front desk to check in.&zigrarr;</p>
+	</div>
+
+	<script type="text/javascript">
+
+	    var eyeImg = document.getElementById('eyeimage');
+	    var closeEye = document.getElementById('eye');
+	    var i=200;
+	    var stop = 0;
+	    var picIndex=1;
+	    var images=["https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/1.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/2.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/3.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/4.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/5.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/6.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/7.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/8.jpg", "https://s3-us-west-2.amazonaws.com/wip-bucket/github/white-with-red/9.jpg"];
+	    var text = ["<p>A man went to a hotel and walked up to the front desk to check in.&zigrarr;</p>", "<p>The woman at the desk gave him his key and told him that</br>on his way to the room there was a door with no number.</br></br>It was locked and no one was allowed inside.&zigrarr;</p>", "<p>Heading to his room, he walked past the locked, numberless door.</br></br>Feeling tired, he ignored the door and went straight to bed.&zigrarr;</p>","<p>The next morning, out of curiosity, he decided to peep</br> into the keyhole of the locked room to see what's inside.&zigrarr;</p>", "<p>Inside, he saw a hotel bedroom, like his, and in the corner</br> was a pale woman leaning into the corner.</p><p></br>He knocked to get her attention but she did not respond.&zigrarr;</p>", "<p>That night, he peeped into the room again, this time seeing only redness.</br></br>Thinking she must have covered the keyhole with something red,</br>he headed back to his room and went to sleep.&zigrarr;</p>", "<p>The next morning, as he was checking out, the man asked</br>the woman at the desk who was in the locked room.</br></br>She sighed and asked &quot;You looked inside, didn't you?</br>Well, I'd might as well tell you...&quot;&zigrarr;</p>", "<p>&quot;A few year ago, a newlywed couple stayed in that room.</br>That night, the husband murdered his wife.&quot;</br></br>&quot;People have seen her ghost haunting that room ever since.</br>They describe her as being pale and white all over.&quot;</br></br>&quot;Except for her eyes...&quot;&zigrarr;</p>", "<p>&quot;... her eyes were red.&quot;</br>Read Again?&zigrarr;</p>"];
+	    var storyText = document.getElementById('storytext');
+
+
+
+	    function blink(){
+	    	
+	    	var close = setInterval(function(){
+	    		closeEye.setAttribute('d', 'M 0 150 q 215 -' + i + ' 450 0 M 0 150 q 215 ' + i + ' 450 0');
+	    			eyeImg.setAttribute('clip-path', 'url(#svgPath)');
+	    			i=i-2;
+	    			if(i<0) clearInterval(close);
+	    	}, 5);
+
+	    	storyText.style.opacity = 0;
+
+	    	setTimeout(function(){
+	    		eyeImg.setAttribute('xlink:href', images[picIndex]);
+	    	}, 500)
+
+	    	setTimeout(function(){
+	    		storyText.innerHTML=text[picIndex];
+	    		storyText.style.opacity = 1;
+	    		picIndex++;
+	    		if(picIndex>=images.length) picIndex=0;
+
+	    		var open = setInterval(function(){
+	    		closeEye.setAttribute('d', 'M 0 150 q 215 -' + i + ' 450 0 M 0 150 q 215 ' + i + ' 450 0');
+	    			eyeimage.setAttribute('clip-path', 'url(#svgPath)');
+	    			i=i+2;
+	    			if(i>200) clearInterval(open);
+	    	}, 5);
+	    	}, 1300);
+
+	    	}
+	</script>
+</body>
+</html>
+    <div id="footer">
+      <p style="margin-top:40px;">&copy; Alberto Guillermo de la Cruz</span></p>
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65309658-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
