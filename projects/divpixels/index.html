@@ -22,10 +22,6 @@
 	.gridblock{
 		cursor: pointer;
 	}
-
-	.gridblock:hover{
-		background-color: #ffcc00;
-	}
 	h1{
 		font-family: 'Press Start 2P';
 	}
@@ -125,6 +121,8 @@
 		console.log(grid);
 
 		var currentColor = "#ffcc00";
+
+		$('head').append("<style>.gridblock:hover{background-color:#ffcc00;}</style>");
 
 		function update(picker) {
     		currentColor = picker.toHEXString();
