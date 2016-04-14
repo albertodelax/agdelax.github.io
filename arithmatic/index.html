@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Arithmatic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+	body{
+		font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		margin: 0;
+		color: white;
+		background-color: #212121;
+		font-weight: 100;
+	}
+	#left{
+		height: 100%;
+		width: 50%;
+		position: absolute;
+		display: inline-block;
+		left: 0;
+	}
+	#right{
+		height: calc(100% - 60px);
+		width: 50%;
+		right: 0;
+		position: absolute;
+		border-left: 1px solid #f44336;
+		margin: 30px 0 30px 0;
+		display: inline-block;
+		transition: all 1s;
+	}
+	#content{
+		top: 50%;
+		left: 50%;
+		position: relative;
+		transform: translateY(-50%) translateX(-50%);
+		margin: 0 20px 0 20px;
+		display: inline-block;
+	}
+	#logo{
+		max-width: 200px;
+	}
+	p{
+		font-size: 20px;
+		letter-spacing: 1.5px;
+	}
+	#app-store{
+		border: 2px solid white;
+		border-radius: 10px;
+		display: inline-block;
+		padding: 0 15px;
+		cursor: pointer;
+	}
+	#app-store:hover{
+		background-color: white;
+		color: #212121;
+		transition: all 0.5s;
+	}
+	h2{
+		font-weight: 600;
+		font-size: 20px;
+		padding: 0;
+	}
+	#phone{
+		max-height: 100%;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		position: relative;
+		transform: translateY(-50%) translateX(-50%);
+	}
+
+	@media (max-width: 500px){
+		#left{
+			position: relative;
+			width: 100%;
+			top: 0;
+			display: inline-block;
+		}
+		#right{
+			border-top: 1px solid #f44336;
+			border-left: none;
+			width: calc(100% - 20px);
+			display: block;
+			position: relative;
+			height: 550px;
+			margin: 0 10px 0 10px;
+		}
+		#content{
+			top: 0;
+			left: 0;
+			padding: 20px;
+			transform: none;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<div id="left">
+		<div id="content">
+			<img src="https://s3.amazonaws.com/playarithmatic.com/arithmatic-logo-w.png" id="logo">
+				<div id="text">
+					<p>Solve arithmetic problems as quickly as possible.</p>
+					<p>Earn high scores and compete in global leaderboards.</p>
+					<p>Unlock the full game to see stats of your performance.</p>
+				</div>
+				<div id="app-store">
+
+					<h2>&#63743; iPhone</h2>
+				</div>
+		</div>
+	</div>
+	<div id="right">
+		<img src="https://s3.amazonaws.com/playarithmatic.com/add-phones.png" id="phone">
+	</div>
+
+	<script type="text/javascript">
+		var screens = [{border:"1px solid #F44336", url:"https://s3.amazonaws.com/playarithmatic.com/add-phones.png"}, {border:"1px solid #2196F3", url:"https://s3.amazonaws.com/playarithmatic.com/sub-phones.png"}, {border:"1px solid #4CAF50", url:"https://s3.amazonaws.com/playarithmatic.com/mult-phones.png"}, {border:"1px solid #9C27B0", url:"https://s3.amazonaws.com/playarithmatic.com/div-phones.png"}];
+		var i = 1;
+
+		window.setInterval(function(){
+			if (window.innerWidth > 600){
+				document.getElementById("right").style.borderLeft = screens[i].border;
+				document.getElementById("right").style.borderTop = "none";
+			} else{
+				document.getElementById("right").style.borderTop = screens[i].border;
+				document.getElementById("right").style.borderLeft = "none";
+			}
+			
+			document.getElementById("phone").src= screens[i].url;
+			i++;
+			if (i === screens.length){
+				i=0;
+			}
+		}, 5000);
+	</script>
+</body>
+</html>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65309658-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
