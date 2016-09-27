@@ -157,9 +157,16 @@
 				mouseDown = true;
 				$( this ).css( "background-color", currentColor );
 			});
+			square.touchstart=function(){
+				mouseDown = true;
+				$( this ).css( "background-color", currentColor );
+			};
 			$(square).mouseup(function(){
 				mouseDown = false;
 			});
+			square.touchend=function(){
+				mouseDown = false;
+			};
 			square.onmouseover=function(){
 				if(mouseDown==true){
 					$( this ).css( "background-color", currentColor );
