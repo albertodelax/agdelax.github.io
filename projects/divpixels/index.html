@@ -23,10 +23,6 @@
 	.gridblock{
 		cursor: pointer;
 	}
-
-	.gridblock:hover{
-		background-color: #ff6016;
-	}
 	h1{
 		font-family: 'Press Start 2P';
 	}
@@ -143,6 +139,7 @@
 
 		var currentColor = "#ff6016";
 
+		$('head').append("<style>.gridblock:hover{background-color:"+currentColor+";}</style>");
 		
 
     	var mouseDown = false;
@@ -179,7 +176,7 @@
 			    		$('.gridblock').css("border", "1px solid " + currentColor);
 			    		console.log(currentColor);
 			    	};
-			    	
+
 		document.getElementById('menu').onclick = function(){
 			document.getElementById('screen').style.display="block";
 		}
