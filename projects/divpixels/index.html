@@ -143,14 +143,7 @@
 
 		var currentColor = "#ff6016";
 
-		function update(picker) {
-    		currentColor = picker.toHEXString();
-    		$('head').append("<style>.gridblock:hover{background-color:"+currentColor+";}</style>");
-    		document.getElementById('screen').style.backgroundColor=currentColor;
-    		document.getElementById('menu').style.backgroundColor=currentColor;
-    		$('.gridblock').css("border", "1px solid " + currentColor);
-    		console.log(currentColor);
-    	};
+		
 
     	var mouseDown = false;
 
@@ -176,8 +169,17 @@
 				}
 			};
 			document.getElementsByTagName('body')[0].appendChild(square);
-		};
+			};
 
+			function update(picker) {
+			    		currentColor = picker.toHEXString();
+			    		$('head').append("<style>.gridblock:hover{background-color:"+currentColor+";}</style>");
+			    		document.getElementById('screen').style.backgroundColor=currentColor;
+			    		document.getElementById('menu').style.backgroundColor=currentColor;
+			    		$('.gridblock').css("border", "1px solid " + currentColor);
+			    		console.log(currentColor);
+			    	};
+			    	
 		document.getElementById('menu').onclick = function(){
 			document.getElementById('screen').style.display="block";
 		}
