@@ -22,6 +22,10 @@
 	.gridblock{
 		cursor: pointer;
 	}
+
+	.gridblock:hover{
+		background-color: #ffcc00;
+	}
 	h1{
 		font-family: 'Press Start 2P';
 	}
@@ -40,11 +44,17 @@
 		text-align: center;
 	}
 	#screen{
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
 		z-index: 100;
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		background-color: #295fff;
+		background-color: #ffcc00;
 		margin: 0 0 0 -5px;
 		color: white;
 		text-align: center;
@@ -66,7 +76,7 @@
 		position: fixed;
 		left: 5px;
 		top: 0;
-		background-color: #295fff;
+		background-color: #ffcc00;
 		color: white;
 		font-size: 40px;
 		text-align: center;
@@ -97,7 +107,7 @@
 		<div id="close">&times;</div>
 		<h1>divPixels</h1>
 		<h2>A no-fuss HTML pixel editor</h2>
-		<input class="jscolor {onFineChange:'update(this)',closable:true,closeText:'Close me!'}" value="295fff">
+		<input class="jscolor {onFineChange:'update(this)',closable:true,closeText:'Close me!'}" value="ffcc00">
 		<div id="checkdiv">
 			<input type="checkbox" id="myCheck" checked><p id='gridlabel'>Gridlines</p>
 		</div>
@@ -120,15 +130,14 @@
 		var grid = width*height;
 		console.log(grid);
 
-		var currentColor = "#295fff";
-
-		$('head').append("<style>.gridblock:hover{background-color:#295fff;}</style>");
+		var currentColor = "#ffcc00";
 
 		function update(picker) {
     		currentColor = picker.toHEXString();
     		$('head').append("<style>.gridblock:hover{background-color:"+currentColor+";}</style>");
     		document.getElementById('screen').style.backgroundColor=currentColor;
     		document.getElementById('menu').style.backgroundColor=currentColor;
+    		$('.gridblock').css("border", "1px solid " + currentColor);
     		console.log(currentColor);
     	};
 
@@ -138,7 +147,7 @@
 			var square = document.createElement('div');
 			square.style.height = "15px";
 			square.style.width = "15px";
-			square.style.border = "1px solid #808080";
+			square.style.border = "1px solid #ffcc00";
 			square.style.margin = "0";
 			square.style.padding = "0";
 			square.style.float = "left";
@@ -168,12 +177,11 @@
 
 		document.getElementById('myCheck').onclick = function(){
 			if(this.checked){
-				$('.gridblock').css("border", "1px solid #808080");
+				$('.gridblock').css("border", "1px solid " + currentColor);
 			} else{
 				$('.gridblock').css("border", "1px solid transparent");
 			}
 		};
-
 	</script>
 </body>
 </html>
