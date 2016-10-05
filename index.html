@@ -82,14 +82,13 @@
 	}
 
 	#linksdown{
-		text-transform: uppercase;
 		position: fixed;
 		top: 0.5em;
 		right: 1em;
 		font-size: 1.5em;
 		z-index: 22;
-		max-width: 600px;
 		display: inline;
+		max-width: 700px;
 		}
 
 	#navbar{
@@ -156,19 +155,47 @@
 	}
 	#scroll-down{
 		position: absolute;
-		top: 85%;
+		top: 83%;
 		font-size: 7vmin;
 		cursor: pointer;
+		left: 2vmin;
 	}
 	#scroll-down:hover{
 		color: gray;
 	}
 
-	@media (min-width: 700px){
+	.nav{
+		display: inline-block;
+		padding: 0;
+		margin-left: -6px;
+	}
+	.dash{
+		display: inline-block;
+		padding: 0;
+		margin-left: -6px;
+	}
+
+	#menubutton{
+		display: none;
+	}
+
+	@media (max-width: 700px){
 		#scroll-down{
-			left: 2vmin;
-			top: 83%;
+			left: auto;
+			top: 85%;
 		}
+		#menubutton{
+			display: inline-block;
+			float: right;
+			cursor: pointer;
+		}
+		.nav{
+			display: none;
+		}
+		.dash{
+			display: none;
+		}
+
 	}
 	</style>
 </head>
@@ -179,7 +206,26 @@
     <h1 id="name">Designer &mdash; Alberto Guillermo de la Cruz &mdash;&nbsp;</h1>
       <h2 id="links">Dribbble &mdash; Twitter &mdash; Github &mdash; LinkedIn &mdash; Medium &mdash; Email &mdash;&nbsp;</h2>
 
-      <p id="linksdown"><a class="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a>&mdash;<a class="contentlinks" href="http://twitter.com/agdelax">Twitter</a>&mdash;<a class="contentlinks" href="http://github.com/agdelax">Github</a>&mdash;<a class="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a>&mdash;<a class="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a>&mdash;<a class="contentlinks" href="mailto:agdelax@gmail.com">Email</a></p>
+      <!-- AFTER SCROLLING DOWN -->
+     <!--  <p id="linksdown"><a class="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a>&mdash;<a class="contentlinks" href="http://twitter.com/agdelax">Twitter</a>&mdash;<a class="contentlinks" href="http://github.com/agdelax">Github</a>&mdash;<a class="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a>&mdash;<a class="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a>&mdash;<a class="contentlinks" href="mailto:agdelax@gmail.com">Email</a></p> -->
+
+      <div id="linksdown">
+      	<p id="menubutton"><a class="contentlinks">Menu</a></p>
+      	<div id="navbox">
+      	<p class="nav"><a class ="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="http://twitter.com/agdelax">Twitter</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="http://github.com/agdelax">Github</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="mailto:agdelax@gmail.com">Email</a></li>
+      	</div>
+      </div>
+      <!-- ____________________ -->
 
       <a href=""><p id="scroll-down">&darr;</p></a>
 	</div>
@@ -193,6 +239,54 @@
 	</div>
 
 	<script type="text/javascript">
+
+		//________________________________________
+
+		$(window).scroll(function () { 
+  		if ($(window).scrollTop() > $('body').height() * 0.65) {
+  			//When scrolling down
+  			$('#face').attr('id', 'facedown');
+  			$('#links').hide();
+  			$('#name').hide();
+  			$('#linksdown').show();
+  			$('#navbar').show();
+  		} else if ($(window).scrollTop() < $('body').height() * 0.65){
+  			//When scrolling back up
+  			$('#facedown').attr('id', 'face');
+  			$('#links').show();
+  			$('#name').show();
+  			$('#linksdown').hide();
+  			$('#navbar').hide();
+  		}
+		});
+		var clicked = false;
+		document.getElementById('menubutton').onclick = function(){
+			if (clicked === false) {
+				clicked=true;
+				$('.nav').css("display", "block");
+				$('#navbar').height("25.5em");
+			} else {
+				clicked=false;
+				$('.nav').hide();
+				$('#navbar').height("6.5em");
+			}
+		}
+
+		$(window).on('resize', function(event){
+
+			var windowWidth = $(window).width();
+			if(windowWidth > 701){
+				$('.nav').css("display", "inline-block");
+				$('#navbar').height("6.5em");
+			}	else if (windowWidth < 701){
+				$('.nav').hide();
+			}
+		});
+
+		if(navigator.userAgent.match(/iPhone/i)) {
+   		document.getElementById('links').style.fontSize = "4.5vmin";
+		}
+
 		$('#name').circleType();
 		$('#links').circleType();
 
@@ -257,30 +351,6 @@
 			linkedinLink.appendChild(linkDiv);
 		};
 		$(linkedinLink).insertAfter("h2 .char49");
-
-		//________________________________________
-
-		$(window).scroll(function () { 
-  		if ($(window).scrollTop() > $('body').height() * 0.65) {
-  			//When scrolling down
-  			$('#face').attr('id', 'facedown');
-  			$('#links').hide();
-  			$('#name').hide();
-  			$('#linksdown').show();
-  			$('#navbar').show();
-  		} else if ($(window).scrollTop() < $('body').height() * 0.65){
-  			//When scrolling back up
-  			$('#facedown').attr('id', 'face');
-  			$('#links').show();
-  			$('#name').show();
-  			$('#linksdown').hide();
-  			$('#navbar').hide();
-  		}
-		});
-
-		if(navigator.userAgent.match(/iPhone/i)) {
-   		document.getElementById('links').style.fontSize = "4.5vmin";
-		}
 
 	</script>
 </body>
