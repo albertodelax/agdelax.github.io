@@ -146,7 +146,6 @@
 		-moz-transform: translate(-45%, -50%);
 		-ms-transform: translate(-45%, -50%);
 		-o-transform: translate(-45%, -50%);
-		transition: all .5s;
 		z-index: 21;
 	}
 	#facedown{
@@ -155,7 +154,6 @@
 		position: fixed;
 		max-width: 3em;
 		z-index: 21;
-		transition: all .5s;
 	}
 	#scroll-down{
 		position: absolute;
@@ -229,7 +227,7 @@
       </div>
       <!-- ____________________ -->
 
-      <a href=""><p id="scroll-down">&darr;</p></a>
+      <a href=" "><p id="scroll-down">&darr;</p></a>
 	</div>
 	<div id="content">
 		<p>Hello! I'm a designer and web developer from Puerto Rico now living in NYC. I've worked on design at places like <a class="contentlinks" href="http://artbinder.com">ArtBinder</a> and <a class="contentlinks" href="http://aliceapp.com">Alice</a>, and have recently launched an <a class="contentlinks" href="http://playarithmatic.com">app of my own</a>. I am skilled in UI/UX design, graphic design, illustration and front-end development. Outside of work I like comics, video games and good beer. <a class="contentlinks" href="mailto:agdelax@gmail.com">Hit me up</a> if you ever need a designer.</p>
@@ -244,22 +242,31 @@
 	<script type="text/javascript">
 
 		//________________________________________
+		var scrollHeight = $(window).scrollTop();
+		console.log(scrollHeight);
+		if (scrollHeight<300) {
+			$('#facedown').css('transition', "all .5s");
+			$('#face').css('transition', "all .5s");
+		}
 
 		$(window).scroll(function () { 
   		if ($(window).scrollTop() > $('body').height() * 0.65) {
   			//When scrolling down
+  			isScrolled=true;
   			$('#face').attr('id', 'facedown');
-  			$('#links').hide();
-  			$('#name').hide();
+  			$('#links').css("color", "white");
+  			$('#name').css("color", "white");
   			$('#linksdown').show();
   			$('#navbar').show();
   		} else if ($(window).scrollTop() < $('body').height() * 0.65){
   			//When scrolling back up
   			$('#facedown').attr('id', 'face');
-  			$('#links').show();
-  			$('#name').show();
+  			$('#links').css("color", "black");
+  			$('#name').css("color", "#212121");
   			$('#linksdown').hide();
   			$('#navbar').hide();
+  			$('#facedown').css('transition', "all .5s");
+				$('#face').css('transition', "all .5s");
   		}
 		});
 		var clicked = false;
@@ -284,6 +291,7 @@
 			}	else if (windowWidth < 701){
 				$('.nav').hide();
 			}
+			location.reload();
 		});
 
 		if(navigator.userAgent.match(/iPhone/i)) {
