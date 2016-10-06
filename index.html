@@ -254,15 +254,15 @@
   			//When scrolling down
   			isScrolled=true;
   			$('#face').attr('id', 'facedown');
-  			$('a').css("color", "white");
+  			$('#links').css("color", "white");
   			$('#name').css("color", "white");
   			$('#linksdown').show();
   			$('#navbar').show();
   		} else if ($(window).scrollTop() < $('body').height() * 0.65){
   			//When scrolling back up
   			$('#facedown').attr('id', 'face');
-  			$('a').css("color", "#212121");
-  			$('#name').css("color", "black");
+  			$('#links').css("color", "black");
+  			$('#name').css("color", "#212121");
   			$('#linksdown').hide();
   			$('#navbar').hide();
   			$('#facedown').css('transition', "all .5s");
