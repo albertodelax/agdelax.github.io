@@ -291,8 +291,17 @@
 			}	else if (windowWidth < 701){
 				$('.nav').hide();
 			}
-			location.reload();
 		});
+
+		function isMobile() {
+			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		}
+
+			if (!isMobile()) {
+				$(window).on('resize', function(event){
+						location.reload();
+				});
+			}
 
 		if(navigator.userAgent.match(/iPhone/i)) {
    		document.getElementById('links').style.fontSize = "4.3vmin";
