@@ -4,30 +4,185 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <h2><a href="http://albertogui.com">Alberto Guillermo de la Cruz</a></h2>
-<h2>Alice CRM System (UI/UX Design)</h2>
+    <head>
+<title>Alberto G. de la Cruz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <script src="http://circletype.labwire.ca/js/circletype.js"></script>
+  <style type="text/css">
+  body{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+    .img-container{
+      position: relative;
+      max-width: 500px;
+      margin: auto;
+      font-size: 1.5em;
+      padding: 0 15px 30px 15px;
+      line-height: 1.7em;
+      top: 6.7em;
+    }
+    img{
+      width: 100%;
+    }
+
+    a{
+    text-decoration: none;
+    color: #212121;
+    text-transform: uppercase;
+    }
+    a:hover{
+    color: gray;
+    }
+
+    .contentlinks{
+    text-transform: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    }
+    .contentlinks:hover{
+    padding-bottom: 4px;
+    transition: all 0.3s;
+    color: black;
+    }
+
+    #linksdown{
+    position: fixed;
+    top: 0.5em;
+    right: 1em;
+    font-size: 1.5em;
+    z-index: 22;
+    display: inline;
+    max-width: 700px;
+    }
+
+    #navbar{
+    height: 6.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 20;
+    border-bottom: solid black 2px;
+    }
+    #facedown{
+    top: 1em;
+    left: 1.3em;
+    position: fixed;
+    max-width: 3em;
+    z-index: 21;
+    }
+
+  .nav{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+  .dash{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+
+  #menubutton{
+    display: none;
+  }
+  h3{
+    font-weight: 400;
+  }
+
+  @media (max-width: 700px){
+    #menubutton{
+      display: inline-block;
+      float: right;
+      cursor: pointer;
+    }
+    .nav{
+      display: none;
+      text-align: right;
+    }
+    .dash{
+      display: none;
+    }
+
+  }
+  </style>
+</head>
+<body>
+      <div id="navbar"></div>
+      <a href="http://albertogui.com"><img id= "facedown" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg"></a>
+      <div id="linksdown">
+        <p id="menubutton"><a class="contentlinks">Menu</a></p>
+        <div id="navbox">
+        <p class="nav"><a class ="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://twitter.com/agdelax">Twitter</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://github.com/agdelax">Github</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="mailto:agdelax@gmail.com">Email</a></li>
+        </div>
+      </div>
+<h3>Alice Concierge CRM</h3>
 <div class="image-container">
+<p>At Alice I was in charge of leading the design for the development of a concierge recommendation feature. We wanted to develop a system where concierge can quickly make recommendations to hotel guests by searching through their notes and database on nearby vendors and being able to easily export the vendor data as a PDF.</p>
+
+<p>After doing a competitive analysis of similar CRM systems (Yelp, TripAdvisor, OpenTable, etc.) we concluded that the most efficient way to display the data was a bisected screen, one side showing the list of available vendors and the other side showing the selected vendor profile. This way concierge can be able to look at a vendor in closer detail and still keep track of other options in the area without having to switch in and out of multiple web pages.</p>
 <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-main.png" style="border: 1px solid #d3d3d3">
+<p>Hotel employees can also easily leaves notes and reviews on the vendor profile, making the information more personalised to the hotel the service is hosted on.</p>
 <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-categories.png" style="border: 1px solid #d3d3d3">
 <img src="
 https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-entry.png">
 <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-email.png">
 <img src="
 https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-print.png">
-<img src="
-https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-pdf.png" style="border: 1px solid #d3d3d3">
-</div>
-
-
-<p>My favorite project at Alice was the design of a CRM system to be used by hotel concierge. We wanted to develop a system where concierge can quickly make recommendations to hotel guests by searching through their notes and database on nearby vendors and being able to easily export the vendor data as a PDF.</p>
-
-<p>After doing a competitive analysis of similar CRM systems (Yelp, TripAdvisor, OpenTable, etc.) we concluded that the most efficient way to display the data was a bisected screen, one side showing the list of available vendors and the other side showing the selected vendor profile. This way concierge can be able to look at a vendor in closer detail and still keep track of other options in the area without having to switch in and out of multiple web pages.</p>
-
-<p>Hotel employees can also easily leaves notes and reviews on the vendor profile, making the information more personalised to the hotel the service is hosted on.</p>
-
 <p>The final step was developing a PDF layout that takes account of all the data available on the profile that can be printed or emailed to the hotel guest, along with navigation and additional comments by the concierge.</p>
 
-<p>I was the design lead on this feature, although I received plenty of guidance and help from not only the other employees at Alice but also from other concierge workers in designing a feature they would be delighted in using.</p>
+<img src="
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/alice-crm/vendor-crm-pdf.png" style="border: 1px solid #d3d3d3">
+<p>The feature has received praise from our users, especially since hotel concierge can easily import the data they had on hand from their other CRM solution, GoConcierge&mdash;a product that hasn't been updated in over a decade. </p>
+</div>
+
+<script type="text/javascript">
+  var clicked = false;
+    document.getElementById('menubutton').onclick = function(){
+      if (clicked === false) {
+        clicked=true;
+        $('.nav').css("display", "block");
+        $('#navbar').height("25.5em");
+      } else {
+        clicked=false;
+        $('.nav').hide();
+        $('#navbar').height("6.5em");
+      }
+    }
+
+    $(window).on('resize', function(event){
+
+      var windowWidth = $(window).width();
+      if(windowWidth > 701){
+        $('.nav').css("display", "inline-block");
+        $('#navbar').height("6.5em");
+      } else if (windowWidth < 701){
+        $('.nav').hide();
+      }
+    });
+</script>
+</body>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
