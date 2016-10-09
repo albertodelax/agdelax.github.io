@@ -272,12 +272,12 @@
 				clicked=true;
 				$('.nav').css("display", "block");
 				$('#navbar').height("25.5em");
-				$('#menubutton').replaceWith('<a class="contentlinks">Close</a>');
+				$('#menubutton').html('<a class="contentlinks">Close</a>');
 			} else {
 				clicked=false;
 				$('.nav').hide();
 				$('#navbar').height("6.5em");
-				$('#menubutton').replaceWith('<a class="contentlinks">Menu</a>');
+				$('#menubutton').html('<a class="contentlinks">Menu</a>');
 			}
 		}
 
