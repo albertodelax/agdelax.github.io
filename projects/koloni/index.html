@@ -166,6 +166,31 @@ https://s3-us-west-2.amazonaws.com/wip-bucket/github/koloni/koloni-make.png" sty
 <img src="
 https://s3-us-west-2.amazonaws.com/wip-bucket/github/koloni/koloni-billboard2.png">
 </div>
+<script type="text/javascript">
+  var clicked = false;
+    document.getElementById('menubutton').onclick = function(){
+      if (clicked === false) {
+        clicked=true;
+        $('.nav').css("display", "block");
+        $('#navbar').height("25.5em");
+      } else {
+        clicked=false;
+        $('.nav').hide();
+        $('#navbar').height("6.5em");
+      }
+    }
+
+    $(window).on('resize', function(event){
+
+      var windowWidth = $(window).width();
+      if(windowWidth > 701){
+        $('.nav').css("display", "inline-block");
+        $('#navbar').height("6.5em");
+      } else if (windowWidth < 701){
+        $('.nav').hide();
+      }
+    });
+</script>
 </body>
 
     <script>
