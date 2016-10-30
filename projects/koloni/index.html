@@ -4,10 +4,123 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <h2><a href="http://albertogui.com">Alberto Guillermo de la Cruz</a></h2>
-<h2>Koloni (UI/UX Design, Branding)</h2>
+    <head>
+<title>Alice Concierge CRM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <script src="http://circletype.labwire.ca/js/circletype.js"></script>
+  <style type="text/css">
+  body{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+    .img-container{
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.5em;
+      padding: 0 15px 30px 15px;
+      line-height: 1.7em;
+      top: 6em;
+    }
+    img{
+      width: 100%;
+    }
 
-<div class="image-container">
+    a{
+    text-decoration: none;
+    color: #212121;
+    text-transform: uppercase;
+    }
+    a:hover{
+    color: gray;
+    }
+
+    .contentlinks{
+    text-transform: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    }
+    .contentlinks:hover{
+    padding-bottom: 4px;
+    transition: all 0.3s;
+    color: black;
+    }
+
+    #linksdown{
+    position: fixed;
+    top: 0.5em;
+    right: 1em;
+    font-size: 1.5em;
+    z-index: 22;
+    display: inline;
+    max-width: 700px;
+    }
+
+    #navbar{
+    height: 6.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 20;
+    border-bottom: solid black 2px;
+    }
+    #facedown{
+    top: 1em;
+    left: 1.3em;
+    position: fixed;
+    max-width: 3em;
+    z-index: 21;
+    }
+
+  .nav{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+  .dash{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+
+  #menubutton{
+    display: none;
+  }
+  h3{
+    font-weight: 400;
+  }
+
+  @media (max-width: 700px){
+    #menubutton{
+      display: inline-block;
+      float: right;
+      cursor: pointer;
+    }
+    .nav{
+      display: none;
+      text-align: right;
+    }
+    .dash{
+      display: none;
+    }
+
+  }
+  </style>
+</head>
+<body>
+<p>In one of my fall semester classes, I developed the identity for a fictional microfinance app called Koloni. I chose the name after discovering the word ‘colony’ is spelled and pronounced very similarly in over thirty different languages, with ‘koloni’ being the most common form of spelling. The app would function very similarly to Kickstarter, although users receiving money can then set up a payment plan to reimburse lenders.</p>
+<div class="img-container">
 <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/koloni/koloni-logo.png">
 <img src="
 https://s3-us-west-2.amazonaws.com/wip-bucket/github/koloni/koloni-home.png" style="padding: 20px; margin: 0;">
@@ -28,8 +141,8 @@ https://s3-us-west-2.amazonaws.com/wip-bucket/github/koloni/koloni-make.png" sty
 <img src="
 https://s3-us-west-2.amazonaws.com/wip-bucket/github/koloni/koloni-billboard2.png">
 </div>
+</body>
 
-<p>In one of my fall semester classes, I developed the identity for a fictional microfinance app called Koloni. I chose the name after discovering the word ‘colony’ is spelled and pronounced very similarly in over thirty different languages, with ‘koloni’ being the most common form of spelling. The app would function very similarly to Kickstarter, although users receiving money can then set up a payment plan to reimburse lenders.</p>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
