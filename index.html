@@ -101,12 +101,6 @@
 		border-bottom: solid black 2px;
 	}
 
-	h3{
-		font-weight: 600;
-		padding-top: 20px;
-		font-size: 1em;
-	}
-
 	@-webkit-keyframes turn{
 		0%{-webkit-transform: rotate(0);}
 		100%{-webkit-transform: rotate(360deg);}
@@ -234,6 +228,21 @@
 		.case-study-box{
 			min-height: 500px;
 		}
+		.project-boxes{
+		max-width: 700px;
+		min-height: 100px;
+		margin: 10px 0;
+		display: block;
+	}
+	.project-img{
+		position: absolute;
+		right: 0;
+		height: 100px;
+	}
+
+	.mini{
+		margin-right: 100px;
+	}
 	}
 
 	@media (max-width: 700px){
@@ -259,28 +268,13 @@
 		line-height: 1.7em;
 	}
 
-	.project-boxes{
-		max-width: 700px;
-		min-height: 100px;
-		margin: 10px 0;
-		display: block;
-	}
+	
 
 	.case-study-box{
 		max-width: 99%;
 		min-height: 250px;
 		padding-bottom: 20px;
 		margin: 10px 0;
-	}
-
-	.project-img{
-		position: absolute;
-		right: 0;
-		height: 100px;
-	}
-
-	.mini{
-		margin-right: 100px;
 	}
 
 	}
@@ -334,8 +328,6 @@
 			<h4>Case Study</h4>
 		</div>
 
-		<!-- <h3>Coded Work<span id="gists">&mdash;<a class="contentlinks" href="http://bl.ocks.org/AGdelaX">Check out my gists.</a></span></h3> -->
-
 		<div class="project-boxes">
 			<a href="/projects/divpixels/"><img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/Home/pikachu-icon.gif" class="project-img"></a>
 			<p class="mini"><a href="/projects/divpixels/" class="contentlinks">divPixels</a></p>
@@ -366,9 +358,6 @@
 			<h4>Printed Work</h4>
 		</div>
 
-		<!-- <p><a class="contentlinks" href="/projects/american-classics/">An Anthology of American Classics</a>&mdash;Four works of classic American literature designed and bound into one volume.</p>
-		<p><a class="contentlinks" href="/projects/uss-maine/">USS Maine Memorial Booklet</a>&mdash;A booklet examining the history of the USS Maine and the monument built to commemorate it. Its destruction sparked the beginning of the Spanish-American War, as well as the birth of 'yellow journalism.'</p>
-		<p><a class="contentlinks" href="/projects/arroz-blanco/">Arroz Blanco</a>&mdash;A t-shirt and sticker line I developed and sold in Puerto Rico Comic Con. The brand is a blend of otaku and Puerto Rican culture.</p> -->
 	</div>
 
 	<script type="text/javascript">
