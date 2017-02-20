@@ -186,6 +186,10 @@
 		width: 100%;
 	}
 
+	#project-boxes-container{
+		text-align: justify;
+	}
+
 	.project-boxes{
 		max-width: 200px;
 		display: inline-block;
@@ -194,6 +198,14 @@
 		margin: 20px 20px 0 0;
 		min-height:300px;
 		vertical-align: top;
+		*display: inline;
+		zoom: 1;
+	}
+
+	#project-boxes-container:after{
+		content: "";
+		width: 100%;
+		display: inline-block;
 	}
 
 	#first-paragraph{
@@ -327,7 +339,7 @@
 			<p class="case-study-text"><a class="contentlinks" href="/projects/alice-crm/">Alice Concierge CRM</a>&mdash;A customer relationship management system designed for hotel concierge as a part of Alice's backend hotel management solution.</p>
 			<h4>Case Study</h4>
 		</div>
-
+<div id="project-boxes-container">
 		<div class="project-boxes">
 			<a href="/projects/divpixels/"><img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/Home/pikachu-icon.gif" class="project-img"></a>
 			<p class="mini"><a href="/projects/divpixels/" class="contentlinks">divPixels</a></p>
@@ -357,6 +369,7 @@
 			<p class="mini"><a href="/projects/arroz-blanco/" class="contentlinks">Arroz Blanco</a></p>
 			<h4>Printed Work</h4>
 		</div>
+	</div>	
 
 	</div>
 
