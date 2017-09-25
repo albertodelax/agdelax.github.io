@@ -384,8 +384,8 @@
    		document.getElementById('links').style.fontSize = "4.3vmin";
 		}
 
-		$('#name').circleType();
-		$('#links').circleType();
+		new CircleType(document.getElementById('name'));
+		new CircleType(document.getElementById('links'));
 
 		$('#linksdown').hide();
 		$('#navbar').hide();
