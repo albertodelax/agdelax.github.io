@@ -64,6 +64,9 @@
 		-o-animation-duration: 30s;
 		-o-animation-iteration-count: infinite;
 		-o-animation-timing-function: linear;
+		height: 105vmin;
+		width: 105vmin;
+		position: absolute;
 	}
 
 	#links{
@@ -78,6 +81,8 @@
 		animation-duration: 60s;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
+		height: 65vmin;
+		width: 65vmin;
 	}
 
 	#linksdown{
@@ -374,11 +379,11 @@
 			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 		}
 
-			if (!isMobile()) {
-				$(window).on('resize', function(event){
-						location.reload();
-				});
-			}
+			// if (!isMobile()) {
+			// 	$(window).on('resize', function(event){
+			// 			location.reload();
+			// 	});
+			// }
 
 		if(navigator.userAgent.match(/iPhone/i)) {
    		document.getElementById('links').style.fontSize = "4.3vmin";
