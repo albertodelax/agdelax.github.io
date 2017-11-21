@@ -69,6 +69,15 @@
 		position: absolute !important;
 		margin: 0;
 	}
+	#name-flex{
+		height: 105vmin;
+		width: 105vmin;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
 
 	#links{
 		color: #212121;
@@ -86,6 +95,14 @@
 		width: 65vmin !important;
 		position: absolute !important;
 		margin: 0;
+	}
+	#links-flex{
+		height: 70vmin;
+		width: 70vmin;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	#linksdown{
@@ -263,8 +280,12 @@
 	<div class="container">
 		<div id="navbar"></div>
 		<img id= "face" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg">
-    <h1 id="name">Designer &mdash; Alberto Guillermo de la Cruz &mdash;&nbsp;</h1>
-      <h2 id="links">Dribbble &mdash; Twitter &mdash; Github &mdash; LinkedIn &mdash; Medium &mdash; Email &mdash;&nbsp;</h2>
+		<div id="name-flex">
+    		<h1 id="name">Designer &mdash; Alberto Guillermo de la Cruz &mdash;&nbsp;</h1>
+    	</div>
+    	<div id="links-flex">
+      		<h2 id="links">Dribbble &mdash; Twitter &mdash; Github &mdash; LinkedIn &mdash; Medium &mdash; Email &mdash;&nbsp;</h2>
+      	</div>
 
       <div id="linksdown">
       	<p id="menubutton"><a class="contentlinks">Menu</a></p>
