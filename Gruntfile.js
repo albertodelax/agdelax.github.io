@@ -55,6 +55,10 @@ module.exports = function (grunt) {
           {
             dest: 'build/github-markdown.css',
             src: 'node_modules/github-markdown-css/github-markdown.css'
+          },
+          {
+            dest: 'build/circletype.min.js',
+            src: 'node_modules/circletype/dist/circletype.min.js'
           }
         ]
       }

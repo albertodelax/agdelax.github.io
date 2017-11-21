@@ -1,17 +1,192 @@
-<h1><a href="http://albertogui.com">Alberto Guillermo de la Cruz</a></h1>
-<h2>Arithmatic (UI/UX Design)</h2>
-<div class="image-container">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/arithmatic_logo_black.png">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/home.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/addition.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/subtraction.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/multiplication.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/division.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/game_over.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/leaderboards.png" style="padding: 20px; margin: 0;">
-<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/leaderboards_2.png" style="padding: 20px; margin: 0;">
+<head>
+<title>Arithmatic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <script src="http://circletype.labwire.ca/js/circletype.js"></script>
+  <style type="text/css">
+  body{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+    .img-container{
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.5em;
+      padding: 0 15px 30px 15px;
+      line-height: 1.7em;
+      top: 6em;
+    }
+    img{
+      width: 100%;
+    }
+
+    a{
+    text-decoration: none;
+    color: #212121;
+    text-transform: uppercase;
+    }
+    a:hover{
+    color: gray;
+    }
+
+    .contentlinks{
+    text-transform: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    }
+    .contentlinks:hover{
+    padding-bottom: 4px;
+    transition: all 0.3s;
+    color: black;
+    }
+
+    #linksdown{
+    position: fixed;
+    top: 0;
+    right: 1em;
+    font-size: 1.5em;
+    z-index: 22;
+    display: inline;
+    max-width: 700px;
+    }
+
+    #navbar{
+    height: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 20;
+    border-bottom: solid black 2px;
+    }
+    #facedown{
+    top: 0.7em;
+    left: 1.3em;
+    position: fixed;
+    max-width: 2.5em;
+    z-index: 21;
+    }
+
+  .nav{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+  .dash{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+
+  #menubutton{
+    display: none;
+  }
+  h3{
+    font-weight: 400;
+  }
+
+  @media (max-width: 700px){
+    #menubutton{
+      display: inline-block;
+      float: right;
+      cursor: pointer;
+    }
+    .nav{
+      display: none;
+      text-align: right;
+    }
+    .dash{
+      display: none;
+    }
+
+  }
+  </style>
+</head>
+<body>
+      <div id="navbar"></div>
+      <a href="http://albertogui.com"><img id= "facedown" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg"></a>
+      <div id="linksdown">
+        <p id="menubutton"><a class="contentlinks">Menu</a></p>
+        <div id="navbox">
+        <p class="nav"><a class ="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://twitter.com/agdelax">Twitter</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://github.com/agdelax">Github</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="mailto:agdelax@gmail.com">Email</a></li>
+        </div>
+      </div>
+<div class="img-container">
+<h3>Arithmatic</h3>
+<p>Originally developed as a project for one of my classes, I decided to take the concept behind Arithmatic and develop it into a full game. Players are presented with an arithmetic problem, and they are given 5 seconds to answer that problem, either by swiping or tapping the correct answer.</p>
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png" style="max-width: 350px;">
+<p>The menu screen requires users to swipe or tap on the option they want to go to. This interaction is identical to how users would interact with the app during gameplay. This was done to reduce the need for a standard tutorial and help users grasp the gameplay controls very quickly.</p>
+<p>In order to help users quickly analyze and solve the problems being presented, I developed a color coded system where each function is represented by its own color:</p>
+<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/add.png" style="max-width: 350px;">
+<p>Red for Addition</p>
+<img src="
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/sub.png" style="max-width: 350px;">
+<p>Blue for Subtraction</p>
+<img src="
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/mult.png" style="max-width: 350px;">
+<p>Green for Multiplication</p>
+<img src="
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/div.png" style="max-width: 350px;">
+<p>Purple for Division</p>
+<p>The monochromatic color scheme of the game makes selected color truly stand out, and makes it all the more shocking when it’s Game Over and the screen turns to black.</p>
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/game-over.png" style="max-width: 350px;">
+<p>The game also comes with iOS Game Center integration, so users can check their scores and compete with one another.</p>
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/highscores-global.png" style="max-width: 350px;">
+<p>Unlocking the game for $0.99 gives players access to personalized user stats, where players can see their success rate and average score time, categorized by each function.</p>
+<img src="
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/stats.png" style="max-width: 350px;">
+<p>Wanting the feel of this game to be ‘just right’ I built a simple prototype version for web browsers using jQuery UI. The prototype was meant solely to plot the user interactions and really nail the look of the animations in game. Afterwards I handed it off to an iOS developer to have it built into a working iOS title available on the app store.</p>
+<img src="
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/arithmatic-motion.gif" style="max-width: 350px;">
+<p>Be sure to check out the game <a class ="contentlinks" href="https://itunes.apple.com/us/app/arithmatic/id1097565159?mt=8">here</a>.</p>
 </div>
 
-<p>One of the projects I made for my App Design class was a fast-paced mobile game based on arithmetic. The player swipes the equation into the correct answer, before the timer bar at the bottom of the screen runs out. The quicker the answer, the more points are rewarded. Each type of function is associated with its own color, potentially allowing quicker responses by players seeing the color and immediately grasping what type of function they must solve. Players can compete with one another in leaderboards to determine who’s on top.</p>
+<script type="text/javascript">
+  var clicked = false;
+    document.getElementById('menubutton').onclick = function(){
+      if (clicked === false) {
+        clicked=true;
+        $('.nav').css("display", "block");
+        $('#navbar').height("25.5em");
+      } else {
+        clicked=false;
+        $('.nav').hide();
+        $('#navbar').height("5em");
+      }
+    }
 
-<p>This is a concept I’d like to develop further.</p>
+    $(window).on('resize', function(event){
+
+      var windowWidth = $(window).width();
+      if(windowWidth > 701){
+        $('.nav').css("display", "inline-block");
+        $('#navbar').height("5em");
+      } else if (windowWidth < 701){
+        $('.nav').hide();
+      }
+    });
+</script>
+</body>

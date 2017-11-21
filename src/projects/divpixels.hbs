@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>divPixels</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src='jscolor.js'></script>
+	<style type="text/css">
+	body{
+		margin: 0 0 0 5px;
+		display: block;
+		position: absolute;
+		font-family: 'Helvetica Neue';
+		overflow: hidden;
+	}
+	.gridblock{
+		cursor: pointer;
+	}
+	h1{
+		font-family: 'Press Start 2P';
+	}
+	h2{
+		font-weight: 400;
+	}
+	h3{
+		line-height: 30px;
+		font-weight: 400;
+	}
+	input{
+		cursor: pointer;
+		padding: 0;
+		height: 30px;
+		border: 1px solid white;
+		text-align: center;
+	}
+	#screen{
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: #ff6016;
+		margin: 0 0 0 -5px;
+		color: white;
+		text-align: center;
+		display: none;
+	}
+	#menucontent{
+		top: 50%;
+		left: 50%;
+		padding: 0;
+		position: absolute;
+		width: 350px;
+		height: 400px;
+		margin-top: -200px;
+		margin-left: -175px;
+	}
+	#close{
+		height: 50px;
+		width: 50px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		font-size: 60px;
+		cursor: pointer;
+		font-family: 'Press Start 2P';
+	}
+	#menu{
+		height: 52px;
+		width: 52px;
+		position: fixed;
+		left: 5px;
+		top: 0;
+		background-color: #ff6016;
+		color: white;
+		font-size: 40px;
+		text-align: center;
+		cursor: pointer;
+	}
+	#menu-icon{
+		margin: -4px 0 0 0;
+	}
+	#gridlabel{
+		display: inline;
+		padding: 0 0 0 8px;
+	}
+	#myCheck{
+		height: 14px;
+	}
+	#checkdiv{
+		margin: 20px 0 -10px 0;
+	}
+	#face{
+		height: 100px;
+	}
+	a{
+		color: white;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="menu"><p id="menu-icon">&#9776;</p></div>
+	<div id="screen">
+		<div id="close">&times;</div>
+		<div id="menucontent">
+			<h1>divPixels</h1>
+			<h2>A no-fuss HTML pixel editor</h2>
+			<input class="jscolor {onFineChange:'update(this)',closable:true,closeText:'Close me!'}" value="ff6016">
+			<div id="checkdiv">
+				<input type="checkbox" id="myCheck" checked><p id='gridlabel'>Gridlines</p>
+			</div>
+			<h3>Built in a weekend by</h3>
+			<a href="http://albertogui.com"><img id= "face" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg"></a>
+			<p>Color picker by <a href="http://jscolor.com">jscolor</a>	</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var windowWidth = window.innerWidth;
+		console.log(windowWidth);
+		var windowHeight = window.innerHeight;
+		console.log(windowHeight);
+		var width = Math.floor(windowWidth/17);
+		document.getElementsByTagName('body')[0].style.width=windowWidth+"px";
+		console.log(width);
+		var height = Math.floor(windowHeight/17);
+		document.getElementsByTagName('body')[0].style.height=windowHeight+"px";
+		console.log(height);
+		var grid = width*height;
+		console.log(grid);
+
+		var currentColor = "#ff6016";
+
+		$('head').append("<style>.gridblock:hover{background-color:"+currentColor+";}</style>");
+		
+
+    	var mouseDown = false;
+
+    	for(i=1;i<=grid;i++){
+			var square = document.createElement('div');
+			square.style.height = "15px";
+			square.style.width = "15px";
+			square.style.border = "1px solid " + currentColor;
+			square.style.margin = "0";
+			square.style.padding = "0";
+			square.style.float = "left";
+			$(square).addClass('gridblock');
+			$(square).mousedown(function(){
+				mouseDown = true;
+				$( this ).css( "background-color", currentColor );
+			});
+			$(square).mouseup(function(){
+				mouseDown = false;
+			});
+			
+			square.onmouseover=function(){
+				if(mouseDown==true){
+					$( this ).css( "background-color", currentColor );
+				}
+			};
+			
+			document.getElementsByTagName('body')[0].appendChild(square);
+			};
+
+			function update(picker) {
+			    		currentColor = picker.toHEXString();
+			    		$('head').append("<style>.gridblock:hover{background-color:"+currentColor+";}</style>");
+			    		document.getElementById('screen').style.backgroundColor=currentColor;
+			    		document.getElementById('menu').style.backgroundColor=currentColor;
+			    		$('.gridblock').css("border", "1px solid " + currentColor);
+			    		console.log(currentColor);
+			    	};
+
+		document.getElementById('menu').onclick = function(){
+			document.getElementById('screen').style.display="block";
+		}
+
+		document.getElementById('close').onclick = function(){
+			document.getElementById('screen').style.display="none";
+		}
+
+		document.getElementById('myCheck').onclick = function(){
+			if(this.checked){
+				$('.gridblock').css("border", "1px solid " + currentColor);
+			} else{
+				$('.gridblock').css("border", "1px solid transparent");
+			}
+		};
+	</script>
+</body>
+</html>

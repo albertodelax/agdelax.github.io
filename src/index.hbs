@@ -1,49 +1,453 @@
-<h1>Alberto Guillermo <span class="title-block">de la Cruz</span></h1>
-<h2>UI/UX Designer &amp; <span class="title-block">Front End Developer</span></h2>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alberto G. de la Cruz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+	<script src="circletype.min.js"></script>
 
-<!-- <h3 class="nav"><a href="#">Projects</a></h3> -->
-<!-- <h3 class="nav"><a href="#">Writings</a></h3> -->
-<h3 class="nav"><a href="/resume">Résumé</a></h3>
+	<style type="text/css">
+	body{
+		background-color: white;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		overflow-x: hidden;
+		font-family: 'Helvetica Neue', sans-serif;
+	}
 
-<p>I am a designer and developer from Puerto Rico now studying and working in NYC. Since I am versed in both the creative and technical sides of developing an application, I want to be closely involved with the user experience and implementation of client side interfaces. I am also interested in data visualization and interactive art.</p>
+	.container{
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	#content {
+    position:relative; 
+    top:105%; 
+    max-width: 99%;
+    margin: auto;
+    font-size: 1.5em;
+    padding: 0 15px 30px 15px;
+    line-height: 1.7em;
+	}
 
-<p>I am currently working on my BFA in Design from the <a href="http://sva.edu">School of Visual Arts</a> and have recently completed a Front End Development Apprenticeship with <a href="http://bloc.io">Bloc</a>.</p>
+	#name{
+		font-size: 11.5vmin;
+		font-weight: 500;
+		-webkit-animation-name: turn;
+		-webkit-animation-direction: reverse;
+		-webkit-animation-duration: 30s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-name: turn;
+		animation-direction: reverse;
+		animation-duration: 30s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		-o-animation-name: turn;
+		-o-animation-direction: reverse;
+		-o-animation-duration: 30s;
+		-o-animation-iteration-count: infinite;
+		-o-animation-timing-function: linear;
+		height: 105vmin;
+		width: 105vmin;
+		position: absolute;
+	}
 
-<p>Outside of work I am an animation, comics and film buff. I used to study Illustration, but I also strongly considered going to school for Art History. I enjoy drinking craft beer and sake with friends and trying new types of cuisine. I love single player video games, although I haven’t been able to sit down and play in quite a long time. You can probably find me spinning in <a href="http://flywheelsports.com">Flywheel's</a> Flatiron location.</p>
+	#links{
+		color: #212121;
+		font-size: 5vmin;
+		font-weight: 400;
+		-webkit-animation-name: turn;
+		-webkit-animation-duration: 60s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-name: turn;
+		animation-duration: 60s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		height: 65vmin;
+		width: 65vmin;
+	}
 
-<p>I can also be found on <a href="https://twitter.com/_albertogui">Twitter</a>, <a href="https://github.com/AGdelaX">GitHub</a>, <a href="http://sblood.tumblr.com/">Tumblr</a> and <a href="https://www.linkedin.com/pub/alberto-de-la-cruz/77/64/280">LinkedIn</a>.</p>
+	#linksdown{
+		position: fixed;
+		top: 0;
+		right: 1em;
+		font-size: 1.5em;
+		z-index: 22;
+		display: inline;
+		max-width: 700px;
+		}
 
-<hr>
+	#navbar{
+		height: 5em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: white;
+		z-index: 20;
+		border-bottom: solid black 2px;
+	}
 
-<h2>Projects</h2>
+	@-webkit-keyframes turn{
+		0%{-webkit-transform: rotate(0);}
+		100%{-webkit-transform: rotate(360deg);}
+	}
 
-<h3><a href="/projects/arroz-blanco">Arroz Blanco</a> (T-Shirt and Sticker Design, Branding)</h3>
-<p>As a summer project, I sought to launch a t-shirt and sticker business and sell the merchandise in Puerto Rico Comic Con. Although the business wasn’t a success, this project is what got me interested in UI/UX Design.</p>
+	@keyframes turn{
+		0%{transform: rotate(0);}
+		100%{transform: rotate(360deg);}
+	}
 
-<h3><a href="/projects/koloni">Koloni</a> (UI/UX Design, Branding)</h3>
-<p>As a semester-long assignment I designed the screens, branding and marketing of a fictional microfinance app I named Koloni.</p>
+	a{
+		text-decoration: none;
+		color: #212121;
+    text-transform: uppercase;
+	}
+	a:hover{
+		color: gray;
+	}
+	.contentlinks{
+		text-transform: none;
+		padding-bottom: 1px;
+		border-bottom: 2px solid black;
+	}
+	.contentlinks:hover{
+		padding-bottom: 4px;
+		transition: all 0.3s;
+		color: black;
+	}
+	#face{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 25vmin;
+		transform: translate(-45%, -50%);
+		-webkit-transform: translate(-45%, -50%);
+		-moz-transform: translate(-45%, -50%);
+		-ms-transform: translate(-45%, -50%);
+		-o-transform: translate(-45%, -50%);
+		z-index: 21;
+	}
+	#facedown{
+		top: 0.7em;
+		left: 1.3em;
+		position: fixed;
+		max-width: 2.5em;
+		z-index: 21;
+	}
+	#scroll-down{
+		position: absolute;
+		top: 88%;
+		font-size: 0.8em;
+		font-weight: 600;
+		left: 2vmin;
+		text-align: center;
+		text-transform: uppercase;
+	}
 
-<h3><a href="/projects/alice-crm">Alice CRM System</a> (UI/UX Design)</h3>
-<p>I was an intern at a hospitality startup called Alice. Being the only designer on the team at the time, they trusted me with a lot of responsibilities and one of my earliest projects there was to design a CRM system to be used by hotel concierge.</p>
+	.nav{
+		display: inline-block;
+		padding: 0;
+		margin-left: -6px;
+	}
+	.dash{
+		display: inline-block;
+		padding: 0;
+		margin-left: -6px;
+	}
 
-<h3><a href="/projects/arithmatic">Arithmatic</a> (UI/UX Design)</h3>
-<p>Designed for my App Design class, Arithmatic is a fast paced, mobile game in which players solve arithmetic problems as quickly as possible. I’m interested in developing this concept further.</p>
+	#menubutton{
+		display: none;
+	}
 
-<h3><a href="https://shining-torch-9429.firebaseapp.com/">BlocChat</a> (Front End Development)</h3>
-<p>My first project in Bloc without training wheels, I built a real time chat room with Angular running on the client side and Firebase as persistent data.</p>
+	.project-boxes{
+		max-width: 49%;
+		display: inline-block;
+		border: 2px solid black;
+		position: relative;
+		margin:0;
+		vertical-align: top;
+	}
 
-<h3><a href="http://bl.ocks.org/AGdelaX/ea352a33ce861f748e7c">Header/Body Font ‘Randomizer’</a> (Front End Development)</h3>
-<p>A quick little project, I used Vanilla JS to write a script that lets users add Google Fonts to two sets of arrays of objects, one for header fonts and the other for body fonts. The script will ‘randomize’ the fonts displayed on the page.</p>
+	#first-paragraph{
+		font-size: 1.6em; 
+		line-height: 1.5em;
+		margin-bottom: 40px;
+	}
 
-<h3><a href="#">CRITlink</a> (Front End Development, UI/UX Design)</h3>
-<p>A light version of InVision’s critiquing system, my goal was to allow users to upload images and be able to send that link to friends to get position based comments on the image. I also played around with jQuery UI to make all the elements on the page draggable. This app was built with ReactJS with Firebase in the back-end.</p>
+	.case-study-box{
+		position: relative;
+		width: 99%;
+		display: inline-block;
+		vertical-align: top;
+		border: 2px solid black;
+		margin: 0 0 15px 0;
+	}
 
-<!-- <hr>
+	.case-study-text{
+		padding: 10px;
+		margin: 25px 0 0 0;
+	}
 
-<h2>Writings</h2>
+	h4{
+		position: absolute;
+		top: -19px;
+		left: 10px;
+		text-transform: uppercase;
+		font-size: 0.5em;
+		font-weight: 600;
+	}
 
-<h3><a href="#">Learning to Code at Bloc</a> (July 19, 2015)</h3>
-<p>A retrospective of my time at Bloc, learning the ins and outs of software engineering. I talk about my expectations when I came into the program and my aspirations for the future after Bloc.</p>
+	@media (max-width: 750px){
+		#menubutton{
+			display: inline-block;
+			float: right;
+			cursor: pointer;
+		}
+		.nav{
+			display: none;
+			text-align: right;
+		}
+		.dash{
+			display: none;
+		}
 
-<h3><a href="#">Rekindling My Love of Learning</a> (August 1, 2015)</h3>
-<p>In high school I was far from the best student. I was often gripped by fears of failing and would do the bare minimum in order to pass. Going to art school taught me to enjoy learning.</p> -->
+	#first-paragraph{
+		font-size: 1em; 
+		line-height: 1.7em;
+	}
+	.project-boxes{
+		max-width: 700px;
+		margin: 10px 0;
+		display: block;
+	}
+	.project-img{
+		position: absolute;
+		right: 0;
+		height: 100px;
+		width: 100px;
+	}
+
+	}
+
+	@media (max-width: 650px){
+		#scroll-down{
+			left: auto;
+			top: 88%;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="navbar"></div>
+		<img id= "face" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg">
+    <h1 id="name">Designer &mdash; Alberto Guillermo de la Cruz &mdash;&nbsp;</h1>
+      <h2 id="links">Dribbble &mdash; Twitter &mdash; Github &mdash; LinkedIn &mdash; Medium &mdash; Email &mdash;&nbsp;</h2>
+
+      <div id="linksdown">
+      	<p id="menubutton"><a class="contentlinks">Menu</a></p>
+      	<div id="navbox">
+      	<p class="nav"><a class ="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="http://twitter.com/agdelax">Twitter</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="http://github.com/agdelax">Github</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a></p>
+      	<p class="dash">&mdash;</p>
+      	<p class="nav"><a class ="contentlinks" href="mailto:agdelax@gmail.com">Email</a></li>
+      	</div>
+      </div>
+      <!-- ____________________ -->
+
+      <p id="scroll-down">Scroll<br><span style="font-size: 2.5em;">&darr;</span></p>
+	</div>
+	<div id="content">
+		<p id="first-paragraph">Hello! I'm a designer, web developer and illustrator from Puerto Rico. I'm currently the Lead Product Designer at <a class="contentlinks" href="https://stayawhile.com/">Stayawhile</a>, in charge of their UI/UX and front-end development. Before that I've worked on design at places like <a class="contentlinks" href="http://artbinder.com">ArtBinder</a> and <a class="contentlinks" href="http://aliceapp.com">Alice</a>, and have also launched an <a class="contentlinks" href="http://playarithmatic.com">app of my own</a>. I believe design is visual engineering. When I work I always think about the content before the form. I am skilled in UI/UX design, graphic design, illustration and front-end development. Outside of work I like webcomics, video games and good beer. <br><a class="contentlinks" href="mailto:agdelax@gmail.com">Hit me up</a> if you ever need a designer.</p>
+
+		<div class="case-study-box">
+			<h4>Case Study</h4>
+			<p class="case-study-text"><a class="contentlinks" href="/projects/arithmatic/">Arithmatic</a>&mdash;An educational mobile game for iPhone, players must solve arithmetic questions as quickly as possible and compete in leaderboards.</p>
+		</div>
+
+		<div class="case-study-box">
+			<h4>Case Study</h4>
+			<p class="case-study-text"><a class="contentlinks" href="/projects/artbinder-personas/">ArtBinder Personas</a>&mdash;Persona development and user research for the large range of ArtBinder's customers and products.</p>
+		</div>
+
+		<div class="case-study-box">
+			<h4>Case Study</h4>
+			<p class="case-study-text"><a class="contentlinks" href="/projects/alice-crm/">Alice Concierge CRM</a>&mdash;A customer relationship management system designed for hotel concierge as a part of Alice's backend hotel management solution.</p>
+		</div>
+
+		<div class="project-boxes">
+			<h4>Coded Work</h4>
+			<p class="case-study-text"><a href="/projects/divpixels/" class="contentlinks">divPixels</a>&mdash;An easy to use, browser-based pixel art tool, built as a weekend project in JavaScript.</p>
+			<p class="case-study-text"><a href="/projects/whitewithred/" class="contentlinks">White with Red</a>&mdash;Illustrations accompanying a short horror story of the same name, made interactive and built with SVG animations.</p>
+			<p class="case-study-text"><a href="http://bl.ocks.org/AGdelaX/raw/5f3982201cfff21e631d/" class="contentlinks">NYC Vehicle Collisions 2014</a>&mdash;An interactive map of NYC plotting vehicles collisions by victim type, time and location. Built with D3 and Leaflet.</p>
+			<p class="case-study-text"><a href="http://bl.ocks.org/AGdelaX/" class="contentlinks">Check out my gists.</a></p>
+		</div>
+
+		<div class="project-boxes">
+			<h4>Printed Work</h4>
+			<p class="case-study-text"><a href="/projects/american-classics/" class="contentlinks">An Anthology of American Classics</a>&mdash;A compilation of four volumes of classic American literature, designed and bound within the same book.</p>
+			<p class="case-study-text"><a href="/projects/uss-maine/" class="contentlinks">USS Maine Memorial Booklet</a>&mdash;A booklet describing the history of the USS Maine, its destruction, the beginning of the Spanish-American War, and an analysis of the monument built to commemorate it.</p>
+			<p class="case-study-text"><a href="/projects/arroz-blanco/" class="contentlinks">Arroz Blanco</a>&mdash;A t-shirt and sticker line made for Puerto Rico Comic-Con, designed as a cross between Puerto Rican and otaku culture.</p>
+		</div>
+
+		<p style="font-size: 0.5em;margin: 30px 0 0 0;font-weight: 600; text-align: center;">Designed and coded by Alberto Guillermo de la Cruz</p>
+	</div>
+
+	<script type="text/javascript">
+
+		//________________________________________
+		var scrollHeight = $(window).scrollTop();
+		console.log(scrollHeight);
+		if (scrollHeight<300) {
+			$('#facedown').css('transition', "all .5s");
+			$('#face').css('transition', "all .5s");
+		}
+
+		$(window).scroll(function () { 
+  		if ($(window).scrollTop() > $('body').height() * 0.68) {
+  			//When scrolling down
+  			isScrolled=true;
+  			$('#face').attr('id', 'facedown');
+  			$('#links').css("color", "white");
+  			$('#name').css("color", "white");
+  			$('#linksdown').show();
+  			$('#navbar').show();
+  		} else if ($(window).scrollTop() < $('body').height() * 0.68){
+  			//When scrolling back up
+  			$('#facedown').attr('id', 'face');
+  			$('#links').css("color", "black");
+  			$('#name').css("color", "#212121");
+  			$('#linksdown').hide();
+  			$('#navbar').hide();
+  			$('#facedown').css('transition', "all .5s");
+				$('#face').css('transition', "all .5s");
+  		}
+		});
+		var clicked = false;
+		document.getElementById('menubutton').onclick = function(){
+			if (clicked === false) {
+				clicked=true;
+				$('.nav').css("display", "block");
+				$('#navbar').height("25.5em");
+				$('#menubutton').html('<a class="contentlinks">Close</a>');
+			} else {
+				clicked=false;
+				$('.nav').hide();
+				$('#navbar').height("5em");
+				$('#menubutton').html('<a class="contentlinks">Menu</a>');
+			}
+		}
+
+		$(window).on('resize', function(event){
+
+			var windowWidth = $(window).width();
+			if(windowWidth > 701){
+				$('.nav').css("display", "inline-block");
+				$('#navbar').height("5em");
+			}	else if (windowWidth < 701){
+				$('.nav').hide();
+			}
+		});
+
+		function isMobile() {
+			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		}
+
+			// if (!isMobile()) {
+			// 	$(window).on('resize', function(event){
+			// 			location.reload();
+			// 	});
+			// }
+
+		if(navigator.userAgent.match(/iPhone/i)) {
+   		document.getElementById('links').style.fontSize = "4.3vmin";
+		}
+
+		$('#name').circleType();
+		$('#links').circleType();
+
+		$('#linksdown').hide();
+		$('#navbar').hide();
+
+    // When changing the rotating navbar remember to change both the for position and the insertAfter
+
+		// FOR DRIBBBLE
+		var aboutLink = document.createElement('a');
+		aboutLink.href="https://dribbble.com/albertosoft";
+		for(i=1; i<9; i++){
+			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+			aboutLink.appendChild(linkDiv);
+		};
+		document.getElementById('links').appendChild(aboutLink);
+
+		// FOR TWITTER
+		var projectsLink = document.createElement('a');
+		projectsLink.href="http://twitter.com/agdelax";
+		for(i=11; i<19; i++){
+			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+			projectsLink.appendChild(linkDiv);
+		};
+		$(projectsLink).insertAfter("h2 .char10");
+
+		// FOR GITHUB
+		var resumeLink = document.createElement('a');
+		resumeLink.href="http://github.com/agdelax";
+		for(i=21; i<28; i++){
+			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+			resumeLink.appendChild(linkDiv);
+		};
+		$(resumeLink).insertAfter("h2 .char20");
+
+		
+		// FOR LINKEDIN
+		var twitterLink = document.createElement('a');
+		twitterLink.href="http://linkedin.com/in/agdelax";
+		for(i=30; i<39; i++){
+			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+			twitterLink.appendChild(linkDiv);
+		};
+		$(twitterLink).insertAfter("h2 .char29");
+
+		
+		// FOR MEDIUM
+		var githubLink = document.createElement('a');
+		githubLink.href="https://medium.com/@albertodelacruz";
+		for(i=41; i<48; i++){
+			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+			githubLink.appendChild(linkDiv);
+		};
+		$(githubLink).insertAfter("h2 .char40");
+
+		
+		// FOR EMAIL
+		var linkedinLink = document.createElement('a');
+		linkedinLink.href="mailto:agdelax@gmail.com";
+		for(i=50; i<57; i++){
+			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+			linkedinLink.appendChild(linkDiv);
+		};
+		$(linkedinLink).insertAfter("h2 .char49");
+
+	</script>
+</body>
+</html>
