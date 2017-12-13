@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <head>
+<title>Arithmatic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <script src="http://circletype.labwire.ca/js/circletype.js"></script>
+  <style type="text/css">
+  body{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+    .img-container{
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.5em;
+      padding: 0 15px 30px 15px;
+      line-height: 1.7em;
+      top: 6em;
+    }
+    img{
+      width: 100%;
+    }
+
+    a{
+    text-decoration: none;
+    color: #212121;
+    text-transform: uppercase;
+    }
+    a:hover{
+    color: gray;
+    }
+
+    .contentlinks{
+    text-transform: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    }
+    .contentlinks:hover{
+    padding-bottom: 4px;
+    transition: all 0.3s;
+    color: black;
+    }
+
+    #linksdown{
+    position: fixed;
+    top: 0;
+    right: 1em;
+    font-size: 1.5em;
+    z-index: 22;
+    display: inline;
+    max-width: 700px;
+    }
+
+    #navbar{
+    height: 5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 20;
+    border-bottom: solid black 2px;
+    }
+    #facedown{
+    top: 0.7em;
+    left: 1.3em;
+    position: fixed;
+    max-width: 2.5em;
+    z-index: 21;
+    }
+
+  .nav{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+  .dash{
+    display: inline-block;
+    padding: 0;
+    margin-left: -6px;
+  }
+
+  #menubutton{
+    display: none;
+  }
+  h3{
+    font-weight: 400;
+  }
+
+  @media (max-width: 700px){
+    #menubutton{
+      display: inline-block;
+      float: right;
+      cursor: pointer;
+    }
+    .nav{
+      display: none;
+      text-align: right;
+    }
+    .dash{
+      display: none;
+    }
+
+  }
+  </style>
+</head>
+<body>
+      <div id="navbar"></div>
+      <a href="http://albertogui.com"><img id= "facedown" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg"></a>
+      <div id="linksdown">
+        <p id="menubutton"><a class="contentlinks">Menu</a></p>
+        <div id="navbox">
+        <p class="nav"><a class ="contentlinks" href="https://dribbble.com/albertosoft">Dribbble</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://twitter.com/agdelax">Twitter</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://github.com/agdelax">Github</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://linkedin.com/in/agdelax">LinkedIn</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="mailto:agdelax@gmail.com">Email</a></li>
+        </div>
+      </div>
+<div class="img-container">
+<h3>Stayawhile Internal Dashboard</h3>
+<p>The operations team was managing all our units and customer interactions through an increasingly complex and bloated set of Excel spreadsheets. If we were to scale this operation, it was obvious we needed to develop an internal platform for the following use cases:</p>
+    <ol>
+        <li>Setting up a new or unfurnished apartment.</li>
+        <li>Managing apartment bookings.</li>
+        <li>Keeping track of all furniture in our units along with their vendor information and use status.</li>
+        <li>A full archive of all members that booked that specific unit, with links to their customer profiles.</li>
+        <li>Voting</li>
+        <li>Membership Club</li>
+        <li>Credit Scoring</li>
+    </ol>
+<p>At that point we were focused on scaling, so we needed a system where we could keep track of what steps had been completed in the process of setting up a new unit. This includes buying and installing the furniture, setting up the WiFi, cable and smart home technology, keeping track of all incoming and outgoing payments to our landlords and utility providers, making sure the kitchen and bathroom toiletries were properly stocked along with bedding appliances and finally keeping track of any damages or obstacles that may have occured in the setup process.</p>
+<p>This requires an enormous amount of work from several key people, both in the office and on the field, so responsiveness was key. In seeing the master list of properties and furniture, a table view is the most appropriate way to display this content. The problem with tables is that they're not responsive, so I designed and coded a tabular UI system that on larger devices displays as a table but condenses into a card on smaller devices, the result being totally responsive tables.</p>
+<!-- RESPONSIVE TABLES GIF -->
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png" style="max-width: 350px;">
+<!-- RESPONSIVE TABLES GIF -->
+<p>To set up these units, tasks need to be completed. Collaborating with the team, I identified the three core task interactions:</p>
+  <ol>
+    <li>Free Entry: The task requires some sort of string to be manually added to the database.</li>
+    <li>File Upload: The task requires the upload of some form of external file, usually a PDF form or document.</li>
+    <li>Mark as Complete: The task requires the user to do something physical in the actual unit, such as moving a couch or calling the landlord, and will only be marked as complete if the task has been done. Likewise, if there's some sort of obstacle preventing the completion of this task, the user can select 'Issue' from a dropdown menu and write what happened in a textbox.</li>
+  </ol>
+<p>For the actual process of setting up units, tasks don't need to be completed in some chronological order, but some tasks require another task to be completed. The solution was nested tasking, similar to nested comment threads in platforms like Reddit. Tasks also have a designated person-in-charge, an ETA for completion and a color key noting how critical it is to complete.</p>
+<!-- TASKS IMAGE -->
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png" style="max-width: 350px;">
+<!-- TASKS IMAGE -->
+<p>In setting up a unit, there are multiple roadmaps with different corresponding teams. In Excel, multiple spreadsheets are separated by a fixed set of tabs at the bottom of a document. I borrowed this UI convention for the dashboard due to the team's familiarity with Excel, but Excel's approach lacks the responsiveness we need. My solution to build out a fixed bottom 'dropup' menu.</p>
+<!-- GIFS BOTTOM TABS -->
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png" style="max-width: 350px;">
+<!-- GIFS BOTTOM TABS -->
+
+<p>Properties are also divided between Building and Units tabs. The Building tab pertains to all information related to the building itself, including the name, location, amenities, policies, etc. It also hosts a master list of all availability and a calendar view for occupancy.</p>
+
+<!-- FLICKITY BUILDING VIEWS -->
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png" style="max-width: 350px;">
+<!-- FLICKITY BUILDING VIEWS -->
+
+<p>The Units tab has a sidebar with individual units within that building. It also shows information exclusive to that unit, a list of the furniture within, its availability, timeline and booking history.</p>
+
+<!-- FLICKITY BUILDING VIEWS -->
+<img src="  
+https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png" style="max-width: 350px;">
+<!-- FLICKITY BUILDING VIEWS -->
+</div>
+<script type="text/javascript">
+  var clicked = false;
+    document.getElementById('menubutton').onclick = function(){
+      if (clicked === false) {
+        clicked=true;
+        $('.nav').css("display", "block");
+        $('#navbar').height("25.5em");
+      } else {
+        clicked=false;
+        $('.nav').hide();
+        $('#navbar').height("5em");
+      }
+    }
+
+    $(window).on('resize', function(event){
+
+      var windowWidth = $(window).width();
+      if(windowWidth > 701){
+        $('.nav').css("display", "inline-block");
+        $('#navbar').height("5em");
+      } else if (windowWidth < 701){
+        $('.nav').hide();
+      }
+    });
+</script>
+</body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65309658-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

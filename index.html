@@ -215,11 +215,24 @@
 
 	.case-study-box{
 		position: relative;
-		width: 99%;
 		display: inline-block;
 		vertical-align: top;
 		border: 2px solid black;
 		margin: 0 0 15px 0;
+	}
+
+	.three-cell{
+		width: 33.33%;
+	}
+
+	.two-cell{
+		width: 50%;
+	}
+
+	.flex-container{
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
 	}
 
 	.case-study-text{
@@ -237,6 +250,9 @@
 	}
 
 	@media (max-width: 750px){
+		.flex-container{
+			display: block;
+		}
 		#menubutton{
 			display: inline-block;
 			float: right;
@@ -308,14 +324,35 @@
       <p id="scroll-down">Scroll<br><span style="font-size: 2.5em;">&darr;</span></p>
 	</div>
 	<div id="content">
-		<p id="first-paragraph">Hello! I'm a designer, web developer and illustrator from Puerto Rico. I'm currently the Lead Product Designer at <a class="contentlinks" href="https://stayawhile.com/">Stayawhile</a>, in charge of their UI/UX and front-end development. Before that I've worked on design at places like <a class="contentlinks" href="http://artbinder.com">ArtBinder</a> and <a class="contentlinks" href="http://aliceapp.com">Alice</a>, and have also launched an <a class="contentlinks" href="http://playarithmatic.com">app of my own</a>. I believe design is visual engineering. When I work I always think about the content before the form. I am skilled in UI/UX design, graphic design, illustration and front-end development. Outside of work I like webcomics, video games and good beer. <br><a class="contentlinks" href="mailto:agdelax@gmail.com">Hit me up</a> if you ever need a designer.</p>
+		<p id="first-paragraph">Hello! I'm a designer, web developer and illustrator from New York. I'm currently the Lead Product Designer at <a class="contentlinks" href="https://stayawhile.com/">Stayawhile</a>, in charge of their UI/UX and front-end development. Before that I've worked on design at places like <a class="contentlinks" href="http://artbinder.com">ArtBinder</a> and <a class="contentlinks" href="http://aliceapp.com">Alice</a>, and have also launched an <a class="contentlinks" href="http://playarithmatic.com">app of my own</a>. I believe design is visual engineering. When I work I always think about the content before the form. I am skilled in UI/UX design, graphic design, illustration and front-end development. Outside of work I like webcomics, video games and good beer. <br><a class="contentlinks" href="mailto:agdelax@gmail.com">Hit me up</a> if you ever need a designer.</p>
 
-		<div class="case-study-box">
-			<h4>Case Study</h4>
-			<p class="case-study-text"><a class="contentlinks" href="/projects/arithmatic/">Arithmatic</a>&mdash;An educational mobile game for iPhone, players must solve arithmetic questions as quickly as possible and compete in leaderboards.</p>
+		<div class="flex-container">
+			<div class="case-study-box three-cell">
+				<h4>Case Study</h4>
+				<p class="case-study-text"><a class="contentlinks" href="/projects/stayawhile/">Stayawhile</a>&mdash;Design and front-end development for a web application that allowed users to book any of the units in our network of apartments, as well as signing up through a background check.</p>
+			</div>
+			<div class="case-study-box three-cell">
+				<h4>Case Study</h4>
+				<p class="case-study-text"><a class="contentlinks" href="/projects/stayawhile-dash/">Stayawhile Internal Dashboard</a>&mdash;An internal CRM to help our team set up new units, contact vendors, manage apartment bookings and maintain customer profiles</p>
+			</div>
+			<div class="case-study-box three-cell">
+				<h4>Case Study</h4>
+				<p class="case-study-text"><a class="contentlinks" href="/projects/stayabit/">Stayabit Token Sale</a>&mdash;Design, development and branding for the ICO of a utility token for the furnished apartment rental industry, built on the Ethereum blockchain.</p>
+			</div>
 		</div>
 
-		<div class="case-study-box">
+		<div class="flex-container">
+			<div class="case-study-box two-cell">
+				<h4>Case Study</h4>
+				<p class="case-study-text"><a class="contentlinks" href="/projects/arithmatic/">Arithmatic</a>&mdash;An educational mobile game for iPhone, players must solve arithmetic questions as quickly as possible and compete in leaderboards.</p>
+			</div>
+			<div class="case-study-box two-cell">
+				<h4>Case Study</h4>
+				<p class="case-study-text"><a href="https://itunes.apple.com/us/app/creepypasta-stickers/id1299579002" class="contentlinks">Creepypasta Stickers</a>&mdash;A horror-themed sticker app for iOS based on the best creepy stories found online, with over 20 animated stickers available for free.</p>
+			</div>
+		</div>
+
+<!-- 		<div class="case-study-box">
 			<h4>Case Study</h4>
 			<p class="case-study-text"><a class="contentlinks" href="/projects/artbinder-personas/">ArtBinder Personas</a>&mdash;Persona development and user research for the large range of ArtBinder's customers and products.</p>
 		</div>
@@ -327,7 +364,6 @@
 
 		<div class="project-boxes">
 			<h4>Coded Work</h4>
-			<p class="case-study-text"><a href="https://itunes.apple.com/us/app/creepypasta-stickers/id1299579002" class="contentlinks">Creepypasta Stickers</a>&mdash;A horror-themed sticker app for iOS based on the best creepy stories found online.</p>
 			<p class="case-study-text"><a href="/projects/divpixels/" class="contentlinks">divPixels</a>&mdash;An easy to use, browser-based pixel art tool, built as a weekend project in JavaScript.</p>
 			<p class="case-study-text"><a href="/projects/whitewithred/" class="contentlinks">White with Red</a>&mdash;Illustrations accompanying a short horror story of the same name, made interactive and built with SVG animations.</p>
 			<p class="case-study-text"><a href="http://bl.ocks.org/AGdelaX/raw/5f3982201cfff21e631d/" class="contentlinks">NYC Vehicle Collisions 2014</a>&mdash;An interactive map of NYC plotting vehicles collisions by victim type, time and location. Built with D3 and Leaflet.</p>
@@ -339,7 +375,7 @@
 			<p class="case-study-text"><a href="/projects/american-classics/" class="contentlinks">An Anthology of American Classics</a>&mdash;A compilation of four volumes of classic American literature, designed and bound within the same book.</p>
 			<p class="case-study-text"><a href="/projects/uss-maine/" class="contentlinks">USS Maine Memorial Booklet</a>&mdash;A booklet describing the history of the USS Maine, its destruction, the beginning of the Spanish-American War, and an analysis of the monument built to commemorate it.</p>
 			<p class="case-study-text"><a href="/projects/arroz-blanco/" class="contentlinks">Arroz Blanco</a>&mdash;A t-shirt and sticker line made for Puerto Rico Comic-Con, designed as a cross between Puerto Rican and otaku culture.</p>
-		</div>
+		</div> -->
 
 		<p style="font-size: 0.5em;margin: 30px 0 0 0;font-weight: 600; text-align: center;">Designed and coded by Alberto Guillermo de la Cruz</p>
 	</div>
@@ -395,7 +431,7 @@
 			if(windowWidth > 701){
 				$('.nav').css("display", "inline-block");
 				$('#navbar').height("5em");
-			}	else if (windowWidth < 701){
+			}	else if (windowWidth < 751){
 				$('.nav').hide();
 			}
 		});
@@ -424,7 +460,7 @@
 
 		// FOR DRIBBBLE
 		var aboutLink = document.createElement('a');
-		aboutLink.href="https://dribbble.com/albertosoft";
+		aboutLink.href="https://dribbble.com/cryptocomix";
 		for(i=1; i<9; i++){
 			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
 			aboutLink.appendChild(linkDiv);
@@ -433,7 +469,7 @@
 
 		// FOR TWITTER
 		var projectsLink = document.createElement('a');
-		projectsLink.href="http://twitter.com/agdelax";
+		projectsLink.href="http://twitter.com/cryptocomix";
 		for(i=11; i<19; i++){
 			var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
 			projectsLink.appendChild(linkDiv);
