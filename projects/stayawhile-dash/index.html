@@ -13,8 +13,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
   <script src="http://circletype.labwire.ca/js/circletype.js"></script>
-  <script type="text/javascript" src="/js/lib/flickity.pkgd.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="/css/lib/flickity.min.css">
+  <script src="../../flickity.pkgd.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="../../flickity.min.css">
   <style type="text/css">
   body{
     background-color: white;
@@ -154,8 +154,7 @@
 <p>At that point we were focused on scaling, so we needed a system where we could keep track of what steps had been completed in the process of setting up a new unit. This includes buying and installing the furniture, setting up the WiFi, cable and smart home technology, keeping track of all incoming and outgoing payments to our landlords and utility providers, making sure the kitchen and bathroom toiletries were properly stocked along with bedding appliances and finally keeping track of any damages or obstacles that may have occured in the setup process.</p>
 <p>This requires an enormous amount of work from several key people, both in the office and on the field, so responsiveness was key. In seeing the master list of properties and furniture, a table view is the most appropriate way to display this content. The problem with tables is that they're not responsive, so I designed and coded a tabular UI system that on larger devices displays as a table but condenses into a card on smaller devices, the result being totally responsive tables.</p>
 <!-- RESPONSIVE TABLES GIF -->
-<img src="  
-https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png">
+<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Dec-13-2017+15-13-22.gif">
 <!-- RESPONSIVE TABLES GIF -->
 <p>To set up these units, tasks need to be completed. Collaborating with the team, I identified the three core task interactions:</p>
   <ol>
@@ -165,27 +164,33 @@ https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/home
   </ol>
 <p>For the actual process of setting up units, tasks don't need to be completed in some chronological order, but some tasks require another task to be completed. The solution was nested tasking, similar to nested comment threads in platforms like Reddit. Tasks also have a designated person-in-charge, an ETA for completion and a color key noting how critical it is to complete.</p>
 <!-- TASKS IMAGE -->
-<img src="  
-https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png">
+<img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Units+Timeline.png">
 <!-- TASKS IMAGE -->
 <p>In setting up a unit, there are multiple roadmaps with different corresponding teams. In Excel, multiple spreadsheets are separated by a fixed set of tabs at the bottom of a document. I borrowed this UI convention for the dashboard due to the team's familiarity with Excel, but Excel's approach lacks the responsiveness we need. My solution to build out a fixed bottom 'dropup' menu.</p>
 <!-- GIFS BOTTOM TABS -->
-<img src="  
-https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png">
+<img src="  https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Dec-13-2017+15-14-55.gif">
 <!-- GIFS BOTTOM TABS -->
 
 <p>Properties are also divided between Building and Units tabs. The Building tab pertains to all information related to the building itself, including the name, location, amenities, policies, etc. It also hosts a master list of all availability and a calendar view for occupancy.</p>
 
 <!-- FLICKITY BUILDING VIEWS -->
-<img src="  
-https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png">
+<div data-flickity='{ "wrapAround": true, "percentPosition": false, "imagesLoaded": true, "freeScroll": true, "adaptiveHeight":true }'>
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Building+Info.png">
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Building+Timeline.png">
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Building+Availability.png">
+</div>
 <!-- FLICKITY BUILDING VIEWS -->
 
 <p>The Units tab has a sidebar with individual units within that building. It also shows information exclusive to that unit, a list of the furniture within, its availability, timeline and booking history.</p>
 
 <!-- FLICKITY BUILDING VIEWS -->
-<img src="  
-https://s3-us-west-2.amazonaws.com/wip-bucket/github/arithmatic/new-screens/homescreen-unlocked-red.png">
+<div data-flickity='{ "wrapAround": true, "percentPosition": false, "imagesLoaded": true, "freeScroll": true, "adaptiveHeight":true }'>
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Units+Info.png">
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Units+Timeline.png">
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Units+Furniture.png">
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Units+Availability.png">
+  <img src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/stayawhile-dash/Unit+Booking+History.png">
+</div>
 <!-- FLICKITY BUILDING VIEWS -->
 </div>
 <script type="text/javascript">
