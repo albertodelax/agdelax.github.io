@@ -12,6 +12,7 @@
 	<link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="circletype.min.js"></script>
 
 	<style type="text/css">
@@ -65,7 +66,7 @@
 		-o-animation-duration: 30s;
 		-o-animation-iteration-count: infinite;
 		-o-animation-timing-function: linear;*/
-		
+
 		/*height: 90vmin !important;*/
 		/*width: 90vmin !important;
 		position: absolute !important;*/
@@ -489,12 +490,15 @@
 			// 	});
 			// }
 
-		if(navigator.userAgent.match(/iPhone/i)) {
-   		document.getElementById('links').style.fontSize = "4.3vmin";
-		}
+		// if(navigator.userAgent.match(/iPhone/i)) {
+  		//document.getElementById('links').style.fontSize = "4.3vmin";
+		// }
 
 		$('#name').circleType();
 		$('#links').circleType();
+		jQuery("#name").fitText();
+		jQuery("#links").fitText();
+
 
 		$('#linksdown').hide();
 		$('#navbar').hide();
