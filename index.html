@@ -478,69 +478,6 @@
 		$('#name').circleType();
 		$('#links').circleType();
 
-		$( window ).resize(function() {
-			$('#name').circleType();
-			$('#links').circleType();
-
-			var aboutLink = document.createElement('a');
-			aboutLink.href="https://dribbble.com/albertosoft";
-			for(i=1; i<9; i++){
-				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
-				aboutLink.appendChild(linkDiv);
-			};
-			document.getElementById('links').appendChild(aboutLink);
-
-			// FOR TWITTER
-			var projectsLink = document.createElement('a');
-			projectsLink.href="http://twitter.com/agdelax";
-			for(i=11; i<19; i++){
-				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
-				projectsLink.appendChild(linkDiv);
-			};
-			$(projectsLink).insertAfter("h2 .char10");
-
-			// FOR GITHUB
-			var resumeLink = document.createElement('a');
-			resumeLink.href="http://github.com/agdelax";
-			for(i=21; i<28; i++){
-				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
-				resumeLink.appendChild(linkDiv);
-			};
-			$(resumeLink).insertAfter("h2 .char20");
-
-			
-			// FOR LINKEDIN
-			var twitterLink = document.createElement('a');
-			twitterLink.href="http://linkedin.com/in/agdelax";
-			for(i=30; i<39; i++){
-				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
-				twitterLink.appendChild(linkDiv);
-			};
-			$(twitterLink).insertAfter("h2 .char29");
-
-			
-			// FOR MEDIUM
-			var githubLink = document.createElement('a');
-			githubLink.href="https://medium.com/@albertodelacruz";
-			for(i=41; i<48; i++){
-				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
-				githubLink.appendChild(linkDiv);
-			};
-			$(githubLink).insertAfter("h2 .char40");
-
-			
-			// FOR EMAIL
-			var linkedinLink = document.createElement('a');
-			linkedinLink.href="mailto:agdelax@gmail.com";
-			for(i=50; i<57; i++){
-				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
-				linkedinLink.appendChild(linkDiv);
-			};
-			$(linkedinLink).insertAfter("h2 .char49");
-		});
-
-
-
 		$('#linksdown').hide();
 		$('#navbar').hide();
 
@@ -602,6 +539,67 @@
 			linkedinLink.appendChild(linkDiv);
 		};
 		$(linkedinLink).insertAfter("h2 .char49");
+
+		$( window ).resize(function() {
+			$('#name').circleType();
+			$('#links').circleType();
+
+			var aboutLink = document.createElement('a');
+			aboutLink.href="https://dribbble.com/albertosoft";
+			for(i=1; i<9; i++){
+				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+				aboutLink.appendChild(linkDiv);
+			};
+			document.getElementById('links').appendChild(aboutLink);
+
+			// FOR TWITTER
+			var projectsLink = document.createElement('a');
+			projectsLink.href="http://twitter.com/agdelax";
+			for(i=11; i<19; i++){
+				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+				projectsLink.appendChild(linkDiv);
+			};
+			$(projectsLink).insertAfter("h2 .char10");
+
+			// FOR GITHUB
+			var resumeLink = document.createElement('a');
+			resumeLink.href="http://github.com/agdelax";
+			for(i=21; i<28; i++){
+				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+				resumeLink.appendChild(linkDiv);
+			};
+			$(resumeLink).insertAfter("h2 .char20");
+
+			
+			// FOR LINKEDIN
+			var twitterLink = document.createElement('a');
+			twitterLink.href="http://linkedin.com/in/agdelax";
+			for(i=30; i<39; i++){
+				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+				twitterLink.appendChild(linkDiv);
+			};
+			$(twitterLink).insertAfter("h2 .char29");
+
+			
+			// FOR MEDIUM
+			var githubLink = document.createElement('a');
+			githubLink.href="https://medium.com/@albertodelacruz";
+			for(i=41; i<48; i++){
+				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+				githubLink.appendChild(linkDiv);
+			};
+			$(githubLink).insertAfter("h2 .char40");
+
+			
+			// FOR EMAIL
+			var linkedinLink = document.createElement('a');
+			linkedinLink.href="mailto:agdelax@gmail.com";
+			for(i=50; i<57; i++){
+				var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+				linkedinLink.appendChild(linkDiv);
+			};
+			$(linkedinLink).insertAfter("h2 .char49");
+		});
 
 	</script>
 </body>
