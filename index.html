@@ -476,10 +476,13 @@
 		}
 
 		$('#name').circleType();
-		// $("#name").fitText(0.87);
-
 		$('#links').circleType();
-		// $("#links").fitText(1.4);
+
+		$( window ).resize(function() {
+			$('#name').circleType();
+			$('#links').circleType();
+		});
+
 
 
 		$('#linksdown').hide();
