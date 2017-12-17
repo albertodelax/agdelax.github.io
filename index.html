@@ -475,6 +475,11 @@
 
 		$('#linksdown').hide();
 		$('#navbar').hide();
+
+		$( window ).resize(function() {
+		  $( "#name" ).css( "height", "91vmin" );
+		  $( "#links" ).css( "height", "61vmin" );
+		});
     // When changing the rotating navbar remember to change both the for position and the insertAfter
 
 		// FOR DRIBBBLE
