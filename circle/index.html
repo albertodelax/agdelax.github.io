@@ -1,0 +1,557 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Alberto G. de la Cruz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/wip-bucket/github/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="../circletype.min.js"></script>
+    <script src="../jquery.fittext.js"></script>
+
+    <style type="text/css">
+    body{
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow-x: hidden;
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    .container{
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        padding: 0;
+        /*position: absolute;*/
+        /*width: 100%;*/
+        height: 100%;
+        overflow-x: hidden;
+    }
+    #content {
+    position:relative; 
+    /*top:105%; */
+    max-width: 99%;
+    margin: auto;
+    font-size: 1.5em;
+    padding: 0 15px 30px 0px;
+    line-height: 1.7em;
+    }
+
+    #name{
+        font-size: 10.5vmin;
+        font-weight: 500;
+        -webkit-animation-name: turn;
+        -webkit-animation-direction: reverse;
+        -webkit-animation-duration: 30s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-name: turn;
+        animation-direction: reverse;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -o-animation-name: turn;
+        -o-animation-direction: reverse;
+        -o-animation-duration: 30s;
+        -o-animation-iteration-count: infinite;
+        -o-animation-timing-function: linear;
+
+        /*height: 91vmin !important;
+        width: 91vmin;*/
+        /*position: absolute !important;*/
+        margin: 0;
+    }
+    #name-flex{
+        height: 100vmin;
+        width: 100vmin;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #links{
+        color: #212121;
+        font-size: 4.5vmin;
+        font-weight: 400;
+        -webkit-animation-name: turn;
+        -webkit-animation-duration: 60s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-name: turn;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        /*height: 61vmin !important;
+        width: 61vmin;*/
+        /*position: absolute !important;*/
+        margin: 0;
+    }
+    #links-flex{
+        height: 71vmin;
+        width: 71vmin;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #linksdown{
+        position: fixed;
+        top: 0;
+        right: 1em;
+        font-size: 1.5em;
+        z-index: 22;
+        display: inline;
+        max-width: 700px;
+        }
+
+    #navbar{
+        height: 5em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 20;
+        border-bottom: solid black 2px;
+    }
+
+    @-webkit-keyframes turn{
+        0%{-webkit-transform: rotate(0);}
+        100%{-webkit-transform: rotate(360deg);}
+    }
+
+    @keyframes turn{
+        0%{transform: rotate(0);}
+        100%{transform: rotate(360deg);}
+    }
+
+    a{
+        text-decoration: none;
+        color: #212121;
+    text-transform: uppercase;
+    }
+    a:hover{
+        color: gray;
+    }
+    .contentlinks{
+        text-transform: none;
+        padding-bottom: 1px;
+        border-bottom: 2px solid black;
+    }
+    .contentlinks:hover{
+        padding-bottom: 4px;
+        transition: all 0.3s;
+        color: black;
+    }
+    #face{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 25vmin;
+        transform: translate(-45%, -50%);
+        -webkit-transform: translate(-45%, -50%);
+        -moz-transform: translate(-45%, -50%);
+        -ms-transform: translate(-45%, -50%);
+        -o-transform: translate(-45%, -50%);
+        z-index: 21;
+    }
+    #facedown{
+        top: 0.7em;
+        left: 1.3em;
+        position: fixed;
+        max-width: 2.5em;
+        z-index: 21;
+    }
+    #scroll-down{
+        position: absolute;
+        top: 88%;
+        font-size: 0.8em;
+        font-weight: 600;
+        left: 2vmin;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .nav{
+        display: inline-block;
+        padding: 0;
+        margin-left: -6px;
+    }
+    .dash{
+        display: inline-block;
+        padding: 0;
+        margin-left: -6px;
+    }
+
+    #menubutton{
+        display: none;
+    }
+
+    .project-boxes{
+        max-width: 49%;
+        display: inline-block;
+        border: 2px solid black;
+        position: relative;
+        margin:0;
+        vertical-align: top;
+    }
+
+    #first-paragraph{
+        font-size: 1.6em; 
+        line-height: 1.5em;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .case-study-box{
+        position: relative;
+        display: flex;
+        vertical-align: top;
+        border: 2px solid black;
+        margin: 10px;
+    }
+
+    .three-cell{
+        width: 33.33%;
+    }
+
+    .two-cell{
+        width: 50%;
+    }
+
+    .flex-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .case-study-text{
+        padding: 10px;
+        margin: 25px 0 0 0;
+    }
+
+    h4{
+        position: absolute;
+        top: -19px;
+        left: 10px;
+        text-transform: uppercase;
+        font-size: 0.5em;
+        font-weight: 600;
+    }
+
+    @media (max-width: 750px){
+        /*#links{
+            height: 60vmin !important;
+            width: 60vmin !important;
+            font-size: 4.7vmin;
+        }
+        #links-flex{
+            height: 60vmin;
+            width: 60vmin;
+        }*/
+        .flex-container{
+            display: block;
+        }
+        .three-cell, .two-cell{
+            width: 100%;
+        }
+        .case-study-box{
+            margin: 5px 0;
+        }
+        #menubutton{
+            display: inline-block;
+            float: right;
+            cursor: pointer;
+        }
+        .nav{
+            display: none;
+            text-align: right;
+        }
+        .dash{
+            display: none;
+        }
+
+    #first-paragraph{
+        font-size: 1em; 
+        line-height: 1.7em;
+    }
+    .project-boxes{
+        max-width: 700px;
+        margin: 10px 0;
+        display: block;
+    }
+    .project-img{
+        position: absolute;
+        right: 0;
+        height: 100px;
+        width: 100px;
+    }
+
+    }
+
+    @media (max-width: 650px){
+        #scroll-down{
+            left: auto;
+            top: 88%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar"></div>
+        <img id= "face" src="https://s3-us-west-2.amazonaws.com/wip-bucket/github/face.svg">
+        <div id="name-flex">
+            <h1 id="name">Designer &mdash; Alberto Guillermo de la Cruz &mdash;&nbsp;</h1>
+        </div>
+        <div id="links-flex">
+            <h2 id="links">Dribbble &mdash; Twitter &mdash; Github &mdash; LinkedIn &mdash; Medium &mdash; Email &mdash;&nbsp;</h2>
+        </div>
+
+      <div id="linksdown">
+        <p id="menubutton"><a class="contentlinks">Menu</a></p>
+        <div id="navbox">
+        <p class="nav"><a class ="contentlinks" href="https://dribbble.com/TokenInteractive">Dribbble</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://twitter.com/albertotoken">Twitter</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://github.com/agdelax">Github</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="http://linkedin.com/in/albertotoken">LinkedIn</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="https://medium.com/@albertodelacruz">Medium</a></p>
+        <p class="dash">&mdash;</p>
+        <p class="nav"><a class ="contentlinks" href="mailto:agdelax@gmail.com">Email</a></li>
+        </div>
+      </div>
+      <!-- ____________________ -->
+
+      <p id="scroll-down">Scroll<br><span style="font-size: 2.5em;">&darr;</span></p>
+    </div>
+    <div id="content">
+        <p id="first-paragraph">Hello! I'm a designer, web developer and illustrator in New York City. Currently, I'm the founder of <a href="http://www.tokeninteractive.com/" class="contentlinks">Token Interactive</a>, a startup game studio. Previously, I was the Lead Product Designer at <a href="https://techcrunch.com/2017/06/26/stayawhile-gets-1-5m-to-target-the-sweet-spot-between-airbnb-and-long-term-rentals/" class="contentlinks">Stayawhile</a>, in charge of their UI/UX and front-end development. Before that I've worked on design at places like <a class="contentlinks" href="http://artbinder.com">ArtBinder</a> and <a class="contentlinks" href="http://aliceapp.com">Alice</a>, and have also launched two apps of my own, <a class="contentlinks" href="https://itunes.apple.com/us/app/arithmatic/id1097565159?mt=8">Arithmatic</a> and <a class="contentlinks" href="https://itunes.apple.com/us/app/creepypasta-stickers/id1299579002">Creepypasta Stickers</a>. I believe design is visual engineering. When I work I always think about the content before the form. I am skilled in UI/UX design, graphic design, illustration and front-end development. Outside of work I like webcomics, tabletop games and sake. <br><a class="contentlinks" href="mailto:agdelax@gmail.com">Hit me up</a> if you ever need a designer.</p>
+
+        <div class="flex-container">
+            <div class="case-study-box three-cell">
+                <h4>UI/UX &amp; Front-end Development</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/stayawhile/">Stayawhile</a>&mdash;Design and front-end development for a web application that allowed users to book any of the units in our network of branded furnished apartments.</p>
+            </div>
+            <div class="case-study-box three-cell">
+                <h4>UI/UX &amp; Front-end Development</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/stayawhile-dash/">Stayawhile Internal Dashboard</a>&mdash;An internal CRM to help our team set up new units, contact vendors, manage apartment bookings and maintain customer profiles</p>
+            </div>
+            <div class="case-study-box three-cell">
+                <h4>UI/UX &amp; Front-end Development</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/stayabit/">Stayabit Token Sale</a>&mdash;Design, development and branding for the ICO of a utility token for the furnished apartment rental industry, built on the Ethereum blockchain.</p>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="case-study-box two-cell">
+                <h4>UI/UX &amp; App Design</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/arithmatic/">Arithmatic</a>&mdash;An educational mobile game for iPhone, players must solve arithmetic questions as quickly as possible and compete in leaderboards.</p>
+            </div>
+            <div class="case-study-box two-cell">
+                <h4>App Design, Illustration &amp; Animation</h4>
+                <p class="case-study-text"><a href="/projects/creepypasta/" class="contentlinks">Creepypasta Stickers</a>&mdash;A horror-themed sticker app for iOS based on the best creepy stories found online, with over 20 animated stickers available for free.</p>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="case-study-box three-cell">
+                <h4>Font Design</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/golden-dragon/">Golden Dragon Font Family</a>&mdash;An open-source display font family based on the classic poster from <em>Enter the Dragon</em>.</p>
+            </div>
+            <div class="case-study-box three-cell">
+                <h4>UI/UX &amp; User Research</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/artbinder-personas/">ArtBinder Personas</a>&mdash;Persona development and user research for ArtBinder's customers and products.</p>
+            </div>
+            <div class="case-study-box three-cell">
+                <h4>UI/UX Design</h4>
+                <p class="case-study-text"><a class="contentlinks" href="/projects/alice-crm/">Alice Concierge CRM</a>&mdash;A customer relationship management system designed for hotel concierge.</p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="case-study-box two-cell">
+                <h4>Coded Work</h4>
+                <div>
+                    <p class="case-study-text"><a href="/projects/divpixels/" class="contentlinks">divPixels</a>&mdash;An easy to use, browser-based pixel art tool, built as a weekend project in JavaScript.</p>
+                    <p class="case-study-text"><a href="/projects/whitewithred/" class="contentlinks">White with Red</a>&mdash;Illustrations accompanying a short horror story of the same name, made interactive and built with SVG animations.</p>
+                    <p class="case-study-text"><a href="http://bl.ocks.org/AGdelaX/raw/5f3982201cfff21e631d/" class="contentlinks">NYC Vehicle Collisions 2014</a>&mdash;An interactive map of NYC plotting vehicles collisions by victim type, time and location. Built with D3 and Leaflet.</p>
+                    <p class="case-study-text"><a href="http://bl.ocks.org/AGdelaX/" class="contentlinks">Check out my gists.</a></p>
+                </div>
+            </div>
+            <div class="case-study-box two-cell">
+                <h4>Printed Work</h4>
+                <div>
+                    <p class="case-study-text"><a href="/projects/american-classics/" class="contentlinks">An Anthology of American Classics</a>&mdash;A compilation of four volumes of classic American literature, designed and bound within the same book.</p>
+                    <p class="case-study-text"><a href="/projects/uss-maine/" class="contentlinks">USS Maine Memorial Booklet</a>&mdash;A booklet describing the history of the USS Maine, its destruction, the beginning of the Spanish-American War, and an analysis of the monument built to commemorate it.</p>
+                    <p class="case-study-text"><a href="/projects/arroz-blanco/" class="contentlinks">Arroz Blanco</a>&mdash;A t-shirt and sticker line made for Puerto Rico Comic-Con, designed as a cross between Puerto Rican and otaku culture.</p>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 0.5em;margin: 30px 0 0 0;font-weight: 600; text-align: center;">Designed and coded by Alberto Guillermo de la Cruz</p>
+    </div>
+
+    <script type="text/javascript">
+
+        //________________________________________
+        var scrollHeight = $(window).scrollTop();
+        console.log(scrollHeight);
+        if (scrollHeight<300) {
+            $('#facedown').css('transition', "all .5s");
+            $('#face').css('transition', "all .5s");
+        }
+
+        $(window).scroll(function () { 
+        if ($(window).scrollTop() > $('body').height() * 0.68) {
+            //When scrolling down
+            isScrolled=true;
+            $('#face').attr('id', 'facedown');
+            $('#links').css("color", "white");
+            $('#name').css("color", "white");
+            $('#linksdown').show();
+            $('#navbar').show();
+        } else if ($(window).scrollTop() < $('body').height() * 0.68){
+            //When scrolling back up
+            $('#facedown').attr('id', 'face');
+            $('#links').css("color", "black");
+            $('#name').css("color", "#212121");
+            $('#linksdown').hide();
+            $('#navbar').hide();
+            $('#facedown').css('transition', "all .5s");
+                $('#face').css('transition', "all .5s");
+        }
+        });
+        var clicked = false;
+        document.getElementById('menubutton').onclick = function(){
+            if (clicked === false) {
+                clicked=true;
+                $('.nav').css("display", "block");
+                $('#navbar').height("25.5em");
+                $('#menubutton').html('<a class="contentlinks">Close</a>');
+            } else {
+                clicked=false;
+                $('.nav').hide();
+                $('#navbar').height("5em");
+                $('#menubutton').html('<a class="contentlinks">Menu</a>');
+            }
+        }
+
+        $(window).on('resize', function(event){
+
+            var windowWidth = $(window).width();
+            if(windowWidth > 751){
+                $('.nav').css("display", "inline-block");
+                $('#navbar').height("5em");
+            }   else if (windowWidth < 751){
+                $('.nav').hide();
+            }
+        });
+
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+            // if (!isMobile()) {
+            //  $(window).on('resize', function(event){
+            //          location.reload();
+            //  });
+            // }
+
+        // if(navigator.userAgent.match(/iPhone/i)) {
+        //document.getElementById('links').style.fontSize = "4.3vmin";
+        // }
+        $('#name').circleType();
+        $('#links').circleType();
+
+        $('#linksdown').hide();
+        $('#navbar').hide();
+
+        $( window ).resize(function() {
+          $( "#name" ).css( "height", "91vmin" );
+          $( "#links" ).css( "height", "61vmin" );
+        });
+    // When changing the rotating navbar remember to change both the for position and the insertAfter
+
+        // FOR DRIBBBLE
+        var aboutLink = document.createElement('a');
+        aboutLink.href="https://dribbble.com/TokenInteractive";
+        for(i=1; i<9; i++){
+            var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+            aboutLink.appendChild(linkDiv);
+        };
+        document.getElementById('links').appendChild(aboutLink);
+
+        // FOR TWITTER
+        var projectsLink = document.createElement('a');
+        projectsLink.href="http://twitter.com/albertotoken";
+        for(i=11; i<19; i++){
+            var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+            projectsLink.appendChild(linkDiv);
+        };
+        $(projectsLink).insertAfter("h2 .char10");
+
+        // FOR GITHUB
+        var resumeLink = document.createElement('a');
+        resumeLink.href="http://github.com/agdelax";
+        for(i=21; i<28; i++){
+            var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+            resumeLink.appendChild(linkDiv);
+        };
+        $(resumeLink).insertAfter("h2 .char20");
+
+        
+        // FOR LINKEDIN
+        var twitterLink = document.createElement('a');
+        twitterLink.href="http://linkedin.com/in/albertotoken";
+        for(i=30; i<39; i++){
+            var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+            twitterLink.appendChild(linkDiv);
+        };
+        $(twitterLink).insertAfter("h2 .char29");
+
+        
+        // FOR MEDIUM
+        var githubLink = document.createElement('a');
+        githubLink.href="https://medium.com/@albertodelacruz";
+        for(i=41; i<48; i++){
+            var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+            githubLink.appendChild(linkDiv);
+        };
+        $(githubLink).insertAfter("h2 .char40");
+
+        
+        // FOR EMAIL
+        var linkedinLink = document.createElement('a');
+        linkedinLink.href="mailto:agdelax@gmail.com";
+        for(i=50; i<57; i++){
+            var linkDiv=document.getElementsByTagName('h2')[0].getElementsByClassName("char"+i)[0];
+            linkedinLink.appendChild(linkDiv);
+        };
+        $(linkedinLink).insertAfter("h2 .char49");
+
+    </script>
+</body>
+</html>
+  </body>
+</html>
