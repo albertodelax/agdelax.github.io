@@ -2,6 +2,10 @@ body{
     font-family: 'Roboto Slab', serif;
     color: #262626;
 }
+@font-face {
+  font-family: Alagard;
+  src: url(../alagard.ttf);
+}
 .main-container{
     max-width: 650px;
     width: 100%;
@@ -31,12 +35,12 @@ body{
     margin: 5px 10px 0 0;
 }
 .small-bold-text{
-    font-weight: 700;
+    font-family: 'Alagard';
     font-size: 1.1em;
     margin: 5px 0;
 }
 .bold-text{
-    font-weight: 700;
+    font-family: 'Alagard';
     font-size: 2em;
     margin: 5px 0;
 }
