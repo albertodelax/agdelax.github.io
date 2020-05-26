@@ -6,12 +6,6 @@ body{
   font-family: Alagard;
   src: url(alagard.ttf);
 }
-.main-container{
-    max-width: 550px;
-    width: 100%;
-    padding: 10px;
-    margin: 20px auto;
-}
 #center-box{
     display: flex;
     display: -webkit-flex;
@@ -24,15 +18,9 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
     margin: auto;
     font-size: 1em;
-}
-.nav{
-    display: inline-block;
-    font-weight: 700;
-    font-size: 1.1em;
-    margin: 5px 10px 0 0;
 }
 .small-bold-text{
     font-family: 'Alagard';
