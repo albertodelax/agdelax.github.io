@@ -7,7 +7,7 @@ body{
   src: url(alagard.ttf);
 }
 .main-container{
-    max-width: 650px;
+    max-width: 500px;
     width: 100%;
     padding: 10px;
     margin: 20px auto;
