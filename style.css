@@ -4,7 +4,7 @@ body{
 }
 @font-face {
   font-family: Alagard;
-  src: url(../alagard.ttf);
+  src: url(alagard.ttf);
 }
 .main-container{
     max-width: 650px;
