@@ -4,9 +4,27 @@ body{
 }
 @font-face {
   font-family: Alagard;
-  src: url(alagard.ttf);
+  src: url(../alagard.ttf);
 }
-#center-box{
+.main-container{
+    max-width: 650px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+}
+.title-cell{
+    width: 35%;
+}
+.content-cell{
+    width: 55%;
+}
+/*#center-box{
     display: flex;
     display: -webkit-flex;
     justify-content: center;
@@ -18,17 +36,24 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 465px;
+    max-width: 650px;
     margin: auto;
     font-size: 1em;
+}*/
+.nav{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: 5px 10px 0 0;
 }
 .small-bold-text{
-    font-family: 'Alagard';
+    font-family: Alagard;
     font-size: 1.1em;
     margin: 5px 0;
+    text-transform: uppercase;
 }
 .bold-text{
-    font-family: 'Alagard';
+    font-family: Alagard;
     font-size: 2em;
     margin: 5px 0;
 }
