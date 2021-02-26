@@ -114,4 +114,10 @@ a{
     .sticky-text{
         position: static;
     }
+    .title-cell{
+        width: 100%;
+    }
+    .content-cell{
+        width: 100%;
+    }
 }
