@@ -18,6 +18,10 @@ body{
   font-family: Rylan;
   src: url(../Rylan-Regular.otf);
 }
+@font-face {
+  font-family: MackinacBold;
+  src: url(../P22MackinacPro-Bold_16.otf);
+}
 .main-container{
     max-width: 650px;
     width: 100%;
@@ -92,8 +96,8 @@ body{
     color: #262626;
 }
 .hyperlink{
-    /*text-decoration: underline;*/
-    border-bottom: 3px solid #4286f4;
+    text-decoration: underline;
+    font-family: MackinacBold, serif;
 }
 a{
     color: #262626;
