@@ -1,6 +1,6 @@
 body{
-    font-family: 'MackinacReg', serif;
-    color: #262626;
+    font-family: 'MackinacMed', serif;
+    color: #595959;
 }
 @font-face {
   font-family: MackinacReg;
@@ -72,11 +72,13 @@ body{
     font-size: 1.1em;
     margin: 5px 0;
     text-transform: uppercase;
+    color: #262626;
 }
 .bold-text{
     font-family: Rylan;
     font-size: 2em;
     margin: 5px 0;
+    color: #262626;
 }
 .body-text{
     margin: 10px 0;
@@ -86,6 +88,7 @@ body{
     margin: 10px 0;
     font-family: MackinacMed, serif;
     font-size: 1.2rem;
+    color: #262626;
 }
 .hyperlink{
     text-decoration: underline;
