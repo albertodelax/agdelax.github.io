@@ -31,10 +31,11 @@ body{
     width: 100%;
 }
 .title-cell{
-    width: 35%;
+    width: 25%;
+    margin: 10px 0;
 }
 .content-cell{
-    width: 55%;
+    width: 75%;
 }
 /*#center-box{
     display: flex;
@@ -52,6 +53,14 @@ body{
     margin: auto;
     font-size: 1em;
 }*/
+.sticky-text{
+    position: sticky;
+    top: 10px;
+}
+.divider-block{
+    border-bottom: 2px solid black;
+    margin: 25px 0 25px 0;
+}
 .nav{
     display: inline-block;
     font-weight: 700;
@@ -65,7 +74,7 @@ body{
     text-transform: uppercase;
 }
 .bold-text{
-    font-family: Rylan;
+    font-family: Alagard;
     font-size: 2em;
     margin: 5px 0;
 }
