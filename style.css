@@ -19,10 +19,11 @@ body{
     width: 100%;
 }
 .title-cell{
-    width: 35%;
+    width: 25%;
+    margin: 10px 0;
 }
 .content-cell{
-    width: 55%;
+    width: 75%;
 }
 /*#center-box{
     display: flex;
@@ -40,6 +41,10 @@ body{
     margin: auto;
     font-size: 1em;
 }*/
+.sticky-text{
+    position: sticky;
+    top: 10px;
+}
 .nav{
     display: inline-block;
     font-weight: 700;
