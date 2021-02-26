@@ -1,10 +1,22 @@
 body{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'MackinacReg', serif;
     color: #262626;
 }
 @font-face {
-  font-family: Alagard;
-  src: url(../alagard.ttf);
+  font-family: MackinacReg;
+  src: url(../P22MackinacPro-Book_25.otf);
+}
+@font-face {
+  font-family: MackinacMed;
+  src: url(../P22MackinacPro-Medium_26.otf);
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url(../ProximaNova-Bold.otf);
+}
+@font-face {
+  font-family: Rylan;
+  src: url(../Rylan-Regular.otf);
 }
 .main-container{
     max-width: 650px;
@@ -19,11 +31,10 @@ body{
     width: 100%;
 }
 .title-cell{
-    width: 25%;
-    margin: 10px 0;
+    width: 35%;
 }
 .content-cell{
-    width: 75%;
+    width: 55%;
 }
 /*#center-box{
     display: flex;
@@ -41,14 +52,6 @@ body{
     margin: auto;
     font-size: 1em;
 }*/
-.sticky-text{
-    position: sticky;
-    top: 10px;
-}
-.divider-block{
-    border-bottom: 2px solid black;
-    margin: 25px 0 25px 0;
-}
 .nav{
     display: inline-block;
     font-weight: 700;
@@ -56,19 +59,24 @@ body{
     margin: 5px 10px 0 0;
 }
 .small-bold-text{
-    font-family: Alagard;
+    font-family: ProximaNova;
     font-size: 1.1em;
     margin: 5px 0;
     text-transform: uppercase;
 }
 .bold-text{
-    font-family: Alagard;
+    font-family: Rylan;
     font-size: 2em;
     margin: 5px 0;
 }
 .body-text{
     margin: 10px 0;
     font-weight: 400;
+}
+.big-body-text{
+    margin: 10px 0;
+    font-family: 'MackinacMed', serif;
+    font-size: 1.2rem;
 }
 .hyperlink{
     text-decoration: underline;
