@@ -47,7 +47,7 @@ body{
 }
 .divider-block{
     border-bottom: 2px solid black;
-    margin: 25px 0 0 0;
+    margin: 25px 0 25px 0;
 }
 .nav{
     display: inline-block;
