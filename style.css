@@ -26,13 +26,14 @@ body{
     max-width: 650px;
     width: 100%;
     padding: 10px;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 .flex-container{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     width: 100%;
+    margin: 15px auto;
 }
 .title-cell{
     width: 25%;
