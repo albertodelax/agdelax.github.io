@@ -91,10 +91,13 @@ body{
     font-weight: 400;
 }
 .big-body-text{
-    margin: 10px 0;
+    margin: 5px 0;
     font-family: MackinacMed, serif;
     font-size: 1.2rem;
     color: #262626;
+}
+.main-text{
+    margin: 15px auto;
 }
 .hyperlink{
     text-decoration: underline;
@@ -105,5 +108,10 @@ a{
     text-decoration: none;
 }
 @media (max-width: 600px){
-
+    .flex-container{
+        display: block;
+    }
+    .sticky-text{
+        position: static;
+    }
 }
