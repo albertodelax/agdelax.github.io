@@ -1,6 +1,6 @@
 body{
     font-family: 'MackinacMed', serif;
-    color: #595959;
+    color: #363636;
 }
 @font-face {
   font-family: MackinacReg;
@@ -63,7 +63,7 @@ body{
     top: 10px;
 }
 .divider-block{
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid #262626;
     margin: 25px 0 25px 0;
 }
 .nav{
