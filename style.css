@@ -24,7 +24,7 @@ body{
 }
 .main-container{
     max-width: 650px;
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 50px auto;
 }
@@ -115,9 +115,9 @@ a{
         position: static;
     }
     .title-cell{
-        width: 100%;
+        width: calc(100% - 40px);
     }
     .content-cell{
-        width: 100%;
+        width: calc(100% - 40px);
     }
 }
