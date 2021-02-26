@@ -74,7 +74,7 @@ body{
     text-transform: uppercase;
 }
 .bold-text{
-    font-family: Alagard;
+    font-family: Rylan;
     font-size: 2em;
     margin: 5px 0;
 }
@@ -84,7 +84,7 @@ body{
 }
 .big-body-text{
     margin: 10px 0;
-    font-family: 'MackinacMed', serif;
+    font-family: MackinacMed, serif;
     font-size: 1.2rem;
 }
 .hyperlink{
