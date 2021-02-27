@@ -42,6 +42,9 @@ body{
 .content-cell{
     width: 75%;
 }
+.img{
+    width: 100%;
+}
 /*#center-box{
     display: flex;
     display: -webkit-flex;
