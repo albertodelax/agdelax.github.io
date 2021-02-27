@@ -48,6 +48,9 @@ body{
 .website-image{
     width: 100%;
 }
+.images-box{
+    margin: 15px auto;
+}
 /*#center-box{
     display: flex;
     display: -webkit-flex;
