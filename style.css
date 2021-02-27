@@ -45,6 +45,9 @@ body{
 .img{
     width: 100%;
 }
+.website-image{
+    width: 100%;
+}
 /*#center-box{
     display: flex;
     display: -webkit-flex;
