@@ -1,3 +1,143 @@
+<head>
+    <style type="text/css">
+        body{
+    font-family: 'MackinacMed', serif;
+    color: #363636;
+}
+@font-face {
+  font-family: MackinacReg;
+  src: url(../P22MackinacPro-Book_25.otf);
+}
+@font-face {
+  font-family: MackinacMed;
+  src: url(../P22MackinacPro-Medium_26.otf);
+}
+@font-face {
+  font-family: ProximaNova;
+  src: url(../ProximaNova-Bold.otf);
+}
+@font-face {
+  font-family: Rylan;
+  src: url(../Rylan-Regular.otf);
+}
+@font-face {
+  font-family: MackinacBold;
+  src: url(../P22MackinacPro-Bold_16.otf);
+}
+.main-container{
+    max-width: 650px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 50px auto;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin: 15px auto;
+}
+.title-cell{
+    width: 25%;
+    margin: 5px 0;
+}
+.content-cell{
+    width: 75%;
+}
+.img{
+    width: 100%;
+}
+.website-image{
+    width: 100%;
+}
+.images-box{
+    margin: 30px auto;
+}
+.blue-border{
+    border: 1px solid #EAF1F4;
+}
+/*#center-box{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    width: 100vw;
+    height: calc(100vh - 20px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    font-size: 1em;
+}*/
+.sticky-text{
+    position: sticky;
+    top: 10px;
+}
+.divider-block{
+    border-bottom: 5px solid #363636;
+    margin: 25px 0 25px 0;
+}
+.nav{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin: 5px 10px 0 0;
+}
+.small-bold-text{
+    font-family: ProximaNova;
+    font-size: 1.1em;
+    margin: 5px 0;
+    text-transform: uppercase;
+    color: #262626;
+}
+.bold-text{
+    font-family: Rylan;
+    font-size: 2.5em;
+    line-height: 2.5rem;
+    margin: 15px 0 5px 0;
+    color: #262626;
+}
+.body-text{
+    margin: 10px 0;
+    font-weight: 400;
+}
+.big-body-text{
+    margin: 5px 0;
+    font-family: MackinacMed, serif;
+    font-size: 1.2rem;
+    color: #262626;
+}
+.main-text{
+    margin: 15px auto;
+}
+.hyperlink{
+    text-decoration: underline;
+    font-family: MackinacBold, serif;
+}
+a{
+    color: #262626;
+    text-decoration: none;
+}
+@media (max-width: 600px){
+    .flex-container{
+        display: block;
+    }
+    .sticky-text{
+        position: static;
+    }
+    .title-cell{
+        width: calc(100% - 40px);
+    }
+    .content-cell{
+        width: calc(100% - 40px);
+    }
+}
+    </style>
+</head>
+
 <title>Alberto de la Cruz</title>
 <div class="main-container">
     <div id="center-box">
